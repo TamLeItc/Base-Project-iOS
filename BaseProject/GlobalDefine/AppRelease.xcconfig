@@ -1,0 +1,51 @@
+//
+//  AppRelease.xcconfig
+//  BaseProject
+//
+//  Created by Tam Le on 10/10/2022.
+//  Copyright © 2022 Tam Le. All rights reserved.
+//
+
+//  MARK: -- CHÚ Ý
+//  AppName, BundleVersion BundleVersionString, ADSAppID(Admob app id)
+//  Những thông tin này chỉnh sửa ở đây, không cần chỉnh sửa trong file Info.plist
+//  Đổi thông tin url như privacy, term of use, nếu chưa hiểu thì liên hệ dev
+
+//Define
+PROTOCOL_HTTP = http:/
+PROTOCOL_HTTPS = https:/
+
+//AppInfo
+AppName                     = BaseProject
+ApplicationID               = id1498001784
+BundleVersion               = 1
+BundleVersionString         = 1.0
+AppsFlyerID                 = 123
+EmailDeveloper              = mail@gmail.com
+AppGroupID                  = group.com.test.app.new.app
+PrivacyPolicyUrl            = $(PROTOCOL_HTTPS)/vi.wikipedia.org/   //PROTOCOL_HTTP if url start with https:/
+TermOfUseUrl                = $(PROTOCOL_HTTPS)/vi.wikipedia.org/   //PROTOCOL_HTTPS if url start with https:/
+EnableShowUpdateAppDialog   = YES                                   //Nếu YES, "dialog update" sẽ hiển thị khi có version mới trên store
+
+//Advertisement
+EnableShowAds               = YES       //YES or NO
+TimeDelayShowInterstitalAd  = 30
+ADSAppID                    = ca-app-pub-3940256099942544~1458002511
+ADSBannerID                 = ca-app-pub-3940256099942544/2934735716
+ADSInterstitialID           = ca-app-pub-3940256099942544/4411468910
+ADSNativeID                 = ca-app-pub-3940256099942544/3986624511
+ADSRewardedID               = App_Không_dùng
+ADSAppOpenID                = ca-app-pub-3940256099942544/1033173712
+
+//InAppPurcharse
+EnableShowInApp             = YES          //Nếu InApp chưa sẵn sàng, nên để giá trị là NO, user sẽ dùng app với full chức năng và quảng cáo
+EnableShowInAppWhenOpenApp  = NO
+LimitedFeature              = YES          //Nếu YES, một số tính năng sẽ bị khóa, phải mua inapp mới xài được.
+IAPSubcriptionSecret        = d709f7978cbf4c33b74c899b53222a66
+IAPOneTime                  = com.test.new.nonconsumable1
+IAPMonthly                  = com.test.new.monthly
+IAPYearly                   = com.test.new.yearly
+
+//LocalNotification
+EnableLocalNotification     = NO
+TimeTriggerNotification     = 81600

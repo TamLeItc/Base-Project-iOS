@@ -1,0 +1,56 @@
+/* 
+ Localizable.strings
+ 
+ Created by MacBook on 6/10/20.
+ Copyright © 2020 Fox. All rights reserved.
+ */
+
+//MARK: -- In app
+"info_premium_1" = "Unlock All Features";
+"info_premium_2" = "Remove All Ads";
+"inapp_message_policy" = "- Payment will be charged to iTunes Account at confirmation of purchase.\n- Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of current period.\n- Account will be charged for renewal within 24-hours prior to the end of current period after confirmation of purchase.\n- Subscription may be managed by the user and auto-renewal may be turned off by going to the user\'s Account Settings after purchase.\n- Any unused portion of free trial period, if offered, will be forfeited when the user purchases a subscription to that publication, where applicable.";
+
+"premium_upgrade" = "Premium Upgrade";
+"days_free_trial" = "%d days free trial";
+"price_free_trial" = "then %@, cancel anytime";
+"week" = "Week";
+"month" = "Month";
+"year" = "Year";
+"lifetime" = "Onetime";
+"for_a_lifetime" = "for a lifetime";
+"save_off" = "Save 20%";
+"restore" = "Restore";
+"start_now" = "START NOW";
+"continue_with_limited_version" = "Continue with limited version";
+"terms_of_use" = "Terms Of Use";
+"privacy_policy" = "Privacy policy";
+
+//MARK: -- Local notification
+"local_noti_title_1" = "Free Premium Account Today, I will help you access the";
+"local_noti_content_1" = "Upgrade your account to Premium so you can use all functions today.";
+
+//MARK: -- General
+"cancel" = "Cancel";
+"settings" = "Settings";
+"ok" = "OK";
+"warning" = "Warning";
+"infomation" = "Infomation";
+"error" = "Error";
+"later" = "Later";
+"review" = "Review";
+
+"review_app_title" = "Please give us your feedback";
+"review_app_message" = "Your opinion is very important to us. We appreciate your feedback and will use it to evaluate changes and make improvements in our app";
+"general_error_title" = "An unknown error";
+"general_error_message" = "An error occurred, please try again later.";
+"no_network_connect_message" = "No internet connection.\nPlease check your connection again and try again later";
+
+//MARK: -- Permission
+"library_permission_is_not_granted_title" = "Library access permission not granted";
+"library_permission_is_not_granted_message" = "You need to go to Settings, allow Library access permission to be able to continue using this function.";
+"camera_permission_is_not_granted_title" = "Camera access permission is not granted";
+"camera_permission_is_not_granted_message" = "You need to go to Settings, allow Camera access permission to be able to continue using this function.";
+"contact_permission_is_not_granted_title" = "Contact access permission is not granted";
+"contact_permission_is_not_granted_message" = "You need to go to Settings, allow Contact access permission to be able to continue using this function.";
+
+//MARK: -- App
