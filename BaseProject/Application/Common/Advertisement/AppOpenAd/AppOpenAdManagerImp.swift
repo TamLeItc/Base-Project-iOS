@@ -32,7 +32,7 @@ class AppOpenAdManagerImp: NSObject, AppOpenAdManager {
         self.rootController = rootController
         self.onCompleted = onCompleted
         
-        if !AdsHelper.canShowAds || !ConnectionHelper.shared.isInternetAvailable() {
+        if !AdManager.canShowAds || !ConnectionHelper.shared.isInternetAvailable() {
             handleCompleted()
             return
         }

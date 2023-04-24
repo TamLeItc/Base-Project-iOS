@@ -20,7 +20,7 @@ class SplashVC: BaseVC<SplashVM> {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if !AdsHelper.canShowAds {
+        if !AdManager.canShowAds {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
                 AppDelegate.shared().windowMainConfig()
             })

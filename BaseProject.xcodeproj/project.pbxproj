@@ -27,9 +27,10 @@
 		E61693AC29F661EC00721CC6 /* BannerAd+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939429F661EB00721CC6 /* BannerAd+UIViewController.swift */; };
 		E61693AD29F661EC00721CC6 /* AppOpenAdManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939629F661EC00721CC6 /* AppOpenAdManagerImp.swift */; };
 		E61693AE29F661EC00721CC6 /* AppOpenAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939729F661EC00721CC6 /* AppOpenAdManager.swift */; };
-		E61693AF29F661EC00721CC6 /* AdsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939829F661EC00721CC6 /* AdsHelper.swift */; };
+		E61693AF29F661EC00721CC6 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939829F661EC00721CC6 /* AdManager.swift */; };
 		E61693B029F661EC00721CC6 /* IntersAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939A29F661EC00721CC6 /* IntersAdManager.swift */; };
 		E61693B129F661EC00721CC6 /* IntersAdManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939B29F661EC00721CC6 /* IntersAdManagerImp.swift */; };
+		E61693B329F6779C00721CC6 /* AdModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61693B229F6779C00721CC6 /* AdModule.swift */; };
 		E664D80329DD308200EF8C56 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664D80229DD308200EF8C56 /* Inject.swift */; };
 		E6927E8429EFDCD70028DAB3 /* PermissionHelperDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927E8329EFDCD70028DAB3 /* PermissionHelperDelegate.swift */; };
 		E6927E9029EFDDA30028DAB3 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927E8629EFDDA30028DAB3 /* BaseTableViewCell.swift */; };
@@ -140,7 +141,7 @@
 		E6B60EC1290247CA00C12F33 /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E1B290247C900C12F33 /* ReachabilityHelper.swift */; };
 		E6B60EC2290247CA00C12F33 /* ConnectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E1C290247C900C12F33 /* ConnectionHelper.swift */; };
 		E6B60EC4290247CA00C12F33 /* IAPFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E1F290247C900C12F33 /* IAPFormatter.swift */; };
-		E6B60EC5290247CA00C12F33 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E20290247C900C12F33 /* IAPHelper.swift */; };
+		E6B60EC5290247CA00C12F33 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E20290247C900C12F33 /* IAPManager.swift */; };
 		E6B60EC7290247CA00C12F33 /* IAPSKProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E22290247C900C12F33 /* IAPSKProduct.swift */; };
 		E6B60EC8290247CA00C12F33 /* IAPProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E23290247C900C12F33 /* IAPProduct.swift */; };
 		E6B60ED0290247CA00C12F33 /* AppDelegate+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E30290247CA00C12F33 /* AppDelegate+Notification.swift */; };
@@ -212,9 +213,10 @@
 		E616939429F661EB00721CC6 /* BannerAd+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BannerAd+UIViewController.swift"; sourceTree = "<group>"; };
 		E616939629F661EC00721CC6 /* AppOpenAdManagerImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppOpenAdManagerImp.swift; sourceTree = "<group>"; };
 		E616939729F661EC00721CC6 /* AppOpenAdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppOpenAdManager.swift; sourceTree = "<group>"; };
-		E616939829F661EC00721CC6 /* AdsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsHelper.swift; sourceTree = "<group>"; };
+		E616939829F661EC00721CC6 /* AdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
 		E616939A29F661EC00721CC6 /* IntersAdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntersAdManager.swift; sourceTree = "<group>"; };
 		E616939B29F661EC00721CC6 /* IntersAdManagerImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntersAdManagerImp.swift; sourceTree = "<group>"; };
+		E61693B229F6779C00721CC6 /* AdModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdModule.swift; sourceTree = "<group>"; };
 		E664D80229DD308200EF8C56 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
 		E6927E8329EFDCD70028DAB3 /* PermissionHelperDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionHelperDelegate.swift; sourceTree = "<group>"; };
 		E6927E8629EFDDA30028DAB3 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -326,7 +328,7 @@
 		E6B60E1B290247C900C12F33 /* ReachabilityHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityHelper.swift; sourceTree = "<group>"; };
 		E6B60E1C290247C900C12F33 /* ConnectionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHelper.swift; sourceTree = "<group>"; };
 		E6B60E1F290247C900C12F33 /* IAPFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPFormatter.swift; sourceTree = "<group>"; };
-		E6B60E20290247C900C12F33 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		E6B60E20290247C900C12F33 /* IAPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		E6B60E22290247C900C12F33 /* IAPSKProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPSKProduct.swift; sourceTree = "<group>"; };
 		E6B60E23290247C900C12F33 /* IAPProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPProduct.swift; sourceTree = "<group>"; };
 		E6B60E2E290247C900C12F33 /* BaseProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseProject-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -942,7 +944,7 @@
 				E616937E29F661EB00721CC6 /* NativeAds */,
 				E616939129F661EB00721CC6 /* RewardedAd */,
 				E616939429F661EB00721CC6 /* BannerAd+UIViewController.swift */,
-				E616939829F661EC00721CC6 /* AdsHelper.swift */,
+				E616939829F661EC00721CC6 /* AdManager.swift */,
 			);
 			path = Advertisement;
 			sourceTree = "<group>";
@@ -951,7 +953,7 @@
 			isa = PBXGroup;
 			children = (
 				E6B60E1F290247C900C12F33 /* IAPFormatter.swift */,
-				E6B60E20290247C900C12F33 /* IAPHelper.swift */,
+				E6B60E20290247C900C12F33 /* IAPManager.swift */,
 				E6B60E22290247C900C12F33 /* IAPSKProduct.swift */,
 				E6B60E23290247C900C12F33 /* IAPProduct.swift */,
 			);
@@ -1017,6 +1019,7 @@
 				E6FA993F29D69576003D56B0 /* DatabaseModule.swift */,
 				E6FA99A929D6A677003D56B0 /* NetworkModule.swift */,
 				E6927EA429EFDDF60028DAB3 /* AppModule.swift */,
+				E61693B229F6779C00721CC6 /* AdModule.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -1431,6 +1434,7 @@
 				E6FA997A29D69607003D56B0 /* RemoteRepositoryImp.swift in Sources */,
 				E6B60E7E290247CA00C12F33 /* ActivityIndicator.swift in Sources */,
 				E6B60E9F290247CA00C12F33 /* TrialInAppCell.swift in Sources */,
+				E61693B329F6779C00721CC6 /* AdModule.swift in Sources */,
 				E6B60E64290247CA00C12F33 /* UIView.swift in Sources */,
 				E6B60EAB290247CA00C12F33 /* IntrinsicTableView.swift in Sources */,
 				E6FA998329D69607003D56B0 /* BaseDaoService.swift in Sources */,
@@ -1465,7 +1469,7 @@
 				E6B60E85290247CA00C12F33 /* DemoSettingVM.swift in Sources */,
 				E6FA998729D69607003D56B0 /* BaseResponse.swift in Sources */,
 				E6B60E6B290247CA00C12F33 /* UIColor.swift in Sources */,
-				E6B60EC5290247CA00C12F33 /* IAPHelper.swift in Sources */,
+				E6B60EC5290247CA00C12F33 /* IAPManager.swift in Sources */,
 				E6C1D0A829D6C84100E46490 /* PermissionHelper.swift in Sources */,
 				E6B60E89290247CA00C12F33 /* DemoLoadDataVC.swift in Sources */,
 				E616939E29F661EC00721CC6 /* MediumNativeCollectionViewCell.swift in Sources */,
@@ -1479,7 +1483,7 @@
 				E6B60E98290247CA00C12F33 /* SplashVM.swift in Sources */,
 				E6B60EAA290247CA00C12F33 /* ITextField.swift in Sources */,
 				E61693A729F661EC00721CC6 /* SmallNativeView.swift in Sources */,
-				E61693AF29F661EC00721CC6 /* AdsHelper.swift in Sources */,
+				E61693AF29F661EC00721CC6 /* AdManager.swift in Sources */,
 				E6927E9129EFDDA30028DAB3 /* BaseVC.swift in Sources */,
 				E6B60EC7290247CA00C12F33 /* IAPSKProduct.swift in Sources */,
 				E6B60E7D290247CA00C12F33 /* ErrorTracker.swift in Sources */,

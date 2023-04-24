@@ -39,7 +39,7 @@ struct MergeOffset {
 //MARK: -- ItemOrAd merge
 
 func mergeData<T>(_ data: [T], with ads: [GADNativeAd], offset: Int = Configs.Advertisement.offsetNativeAdsAndItem) -> [ItemOrAd<T>] {
-    if !AdsHelper.canShowAds || ads.isEmpty {
+    if !AdManager.canShowAds || ads.isEmpty {
         let merged: [ItemOrAd<T>] = data.map { .item($0) }
         return merged
     }

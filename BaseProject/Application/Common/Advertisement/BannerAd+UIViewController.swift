@@ -43,7 +43,7 @@ extension UIViewController: GADBannerViewDelegate {
         let bannerView = GADBannerView()
         bannerView.adUnitID = Configs.Advertisement.admobBannerId
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
-            if AdsHelper.canShowAds {
+            if AdManager.canShowAds {
                 if adSize != nil {
                     bannerView.adSize = adSize!
                 } else {
@@ -61,7 +61,7 @@ extension UIViewController: GADBannerViewDelegate {
     func addAdmobBanner(to bannerView: GADBannerView) {
         bannerView.backgroundColor = .clear
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
-            if AdsHelper.canShowAds {
+            if AdManager.canShowAds {
                 bannerView.adUnitID = Configs.Advertisement.admobBannerId
                 bannerView.rootViewController = self
                 bannerView.delegate = self

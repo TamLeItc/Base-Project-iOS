@@ -38,7 +38,7 @@ extension ItemAdLoadMore: IdentifiableType where T: IdentifiableType, T.Identity
 
 func mergeData<T>(_ data: [T], with ads: [GADNativeAd], offset: Int = Configs.Advertisement.offsetNativeAdsAndItem, loadMore: Bool) -> [ItemAdLoadMore<T>] {
     
-    if !AdsHelper.canShowAds || ads.isEmpty {
+    if !AdManager.canShowAds || ads.isEmpty {
         var merged: [ItemAdLoadMore<T>] = data.map { .item($0) }
         if loadMore {
             merged.append(.loadMore)

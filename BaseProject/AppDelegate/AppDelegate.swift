@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var eventLogger: EventLogger
     @Inject
     var remoteConfigManager: RemoteConfigManager
+    @Inject
+    var openAdManager: AppOpenAdManager
     
     var window: UIWindow?
     var isLightForegroundStatusBar = false
@@ -55,12 +57,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RxBus.shared.post(event: BusEvents.DidBecomeActive())
         AppUtils.requestIDFA() {
             DispatchQueue.main.async {
-                AppsFlyerLib.shared().start()
                 self.openAppAdsConfigPresent()
                 self.remoteConfigManager.fetchConfig {
-                    self.eventLogger.configAdjust()
+                    self.eventLogger.startWith(self.remoteConfigManager)
                 }
-                self.eventLogger.configSearchAds()
             }
         }
     }
@@ -116,16 +116,18 @@ extension AppDelegate {
 
 extension AppDelegate {
     private func inappConfig() {
-        IAPHelper.shared().setupIAP(sharedSecret: Configs.InAppPurcharse.iAPSubcriptionSecret)
+        IAPManager.shared().setupIAP(sharedSecret: Configs.InAppPurcharse.iAPSubcriptionSecret)
     }
     
     private func adsConfig() {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         
-        AdsHelper.shared.initWith(rootVC: window!.rootViewController!,
-                                  interstitialAdId: Configs.Advertisement.admobInterstitialId,
-                                  rewardInterstitalAdId: Configs.Advertisement.admobRewardedVideoId,
-                                  nativeAdId: Configs.Advertisement.admobNativeAdId)
+        AdManager.shared.initAdWith(
+            appOpenAdId: Configs.Advertisement.openAppAdsId,
+            interstitialAdId: Configs.Advertisement.admobInterstitialId,
+            rewardInterstitalAdId: Configs.Advertisement.admobRewardedVideoId,
+            timedelayShowInterstitalAd: Configs.Advertisement.timedelayShowInterstitalAd
+        )
     }
     
     private func appFlyersConfigs() {
@@ -141,7 +143,7 @@ extension AppDelegate {
         if rootVC != nil && (rootVC!.isKind(of: InAppProductVC.self) || rootVC!.isKind(of: WebviewVC.self)) {
             return
         }
-        AppOpenAdsHelper.shared.tryToPresentAd(rootVC) {
+        openAdManager.tryToPresentAd(rootVC) {
             if rootVC!.isKind(of: SplashVC.self) {
                 self.windowMainConfig()
             }

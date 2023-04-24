@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import RxSwift
 import RxCocoa
+import GoogleMobileAds
 
 class BaseVM: NSObject {
     
@@ -27,18 +28,50 @@ class BaseVM: NSObject {
     var remoteRepository: RemoteRepository
     @Inject
     var localRespository: LocalRespository
+    @Inject
+    var nativeAdManager: NativeAdManager
     
     let bag = DisposeBag()
     
     required override init() {
         super.init()
         
-        IAPHelper.shared().subscriptionSucceed {[weak self] isPurchased in
+        IAPManager.shared().subscriptionSucceed {[weak self] isPurchased in
             guard let self = self else { return }
             self.subscriptionSucceed.accept((isPurchased))
         }
         
         registerLisenBusEvent()
+    }
+    
+    func fetchNativeAds(_ rootVC: UIViewController) {
+        nativeAdManager.loadAd(rootVC, nativeAdId: Configs.Advertisement.admobNativeAdId)
+    }
+    
+    func subcriptionMergeAds<T>(
+        withDataRelay dataRelay: BehaviorRelay<[T]>,
+        offset: MergeOffset
+    ) -> Observable<(items: [T], mergeList: [ItemOrAd<T>])> {
+        return Observable<(items: [T], mergeList: [ItemOrAd<T>])>
+            .combineLatest(
+                dataRelay.asObservable(),
+                Observable.merge(
+                    nativeAdManager.subsNativeAds(),
+                    subscriptionSucceed.map { isPurchased in
+                        if isPurchased {
+                            return [GADNativeAd]()
+                        } else {
+                            return self.nativeAdManager.getNativeAds()
+                        }
+                    }
+                )
+            ) { items, ads -> (items: [T], mergeList: [ItemOrAd<T>]) in
+                if (UIDevice.isPad) {
+                    return (items: items, mergeList: mergeData(items, with: ads, offset: offset.pad))
+                } else {
+                    return (items: items, mergeList: mergeData(items, with: ads, offset: offset.phone))
+                }
+            }
     }
     
     func registerLisenBusEvent()  {}

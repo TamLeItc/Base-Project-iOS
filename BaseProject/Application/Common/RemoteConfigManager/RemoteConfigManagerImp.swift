@@ -24,11 +24,12 @@ class RemoteConfigManagerImp: RemoteConfigManager {
     
     init() {
         remoteConfig = RemoteConfig.remoteConfig()
-        setDefaultValue()
     }
     
     func fetchConfig(_ onCompleted: (() -> Void)?) {
         remoteConfig = RemoteConfig.remoteConfig()
+        setDefaultValue()
+        
         remoteConfig.fetch() { status, error in
             if status == .success {
                 self.remoteConfig.activate(completion: nil)

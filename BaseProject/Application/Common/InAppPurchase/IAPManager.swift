@@ -14,7 +14,7 @@ import UIKit
 import SwiftyStoreKit
 import TPInAppReceipt
 
-class IAPHelper {
+class IAPManager {
     
     var memberShipStatus: Bool!{
         set{ UserDefaultHelper.shared.preferences?.set(newValue, forKey: USER_MEMBERSIP_PREMIUM_STATUS) }
@@ -31,16 +31,16 @@ class IAPHelper {
     private var sharedSecret :String!
     private var subscriptionCallBacks : [((_ isPurchased: Bool)-> Void)]!
     
-    private static var shareInstance :IAPHelper = {
-        let iapHelper = IAPHelper()
-        return iapHelper
+    private static var shareInstance: IAPManager = {
+        let iapManager = IAPManager()
+        return iapManager
     }()
     
     init() {
         self.subscriptionCallBacks = []
     }
     
-    class func shared() -> IAPHelper {
+    class func shared() -> IAPManager {
         return shareInstance
     }
     
@@ -49,7 +49,7 @@ class IAPHelper {
     }
     
     func isSubscribed() -> Bool {
-        if ((!IAPHelper.shared().memberShipStatus) || (IAPHelper.shared().userMembershipCheck() != MembershipType.premiumMembership.rawValue)){
+        if (!memberShipStatus || userMembershipCheck() != MembershipType.premiumMembership.rawValue){
             return false
         }
         

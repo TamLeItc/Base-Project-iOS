@@ -43,7 +43,7 @@ class IntersAdManagerImp: NSObject, IntersAdManager {
     }
     
     private var canShowInterstitialAd: Bool {
-        AdsHelper.canShowAds &&
+        AdManager.canShowAds &&
             Date().timeIntervalSince1970 - lastTimeShowAd > timeDelay
     }
 }

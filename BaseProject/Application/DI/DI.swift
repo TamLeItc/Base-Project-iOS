@@ -22,6 +22,7 @@ class DI {
         RepositoryModule().register(container: container)
         ViewModelModule().register(container: container)
         AppModule().register(container: container)
+        AdModule().register(container: container)
     }
     
     func resolve<T>() -> T {

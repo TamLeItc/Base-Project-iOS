@@ -63,7 +63,7 @@ class DemoLoadDataVC: BaseVC<DemoLoadDataVM> {
             }
             .subscribe(onNext: { [weak self] item in
                 guard let self = self else { return }
-                AdsHelper.shared.interstitalAd.showAd(self) {
+                AdManager.shared.intersAd.showAd(self) {
                     self.viewModel.itemSelected(item)
                 }
             })
@@ -102,7 +102,7 @@ class DemoLoadDataVC: BaseVC<DemoLoadDataVM> {
     
     override func loadBannerAds() {
         super.loadBannerAds()
-        if AdsHelper.canShowAds {
+        if AdManager.canShowAds {
             banner = addAdmobBanner(topView: tableView)
         } else {
             removeBannerView(banner)

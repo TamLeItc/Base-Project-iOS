@@ -22,8 +22,8 @@ class AppUtils {
         let submitAction = UIAlertAction(title: "Submit", style: .default, handler: { _ in
             let pinCode = alert.textFields![0].text ?? ""
             if pinCode == "132978" {
-                IAPHelper.shared().memberShipStatus = true
-                IAPHelper.shared().memberShipExpiredDay = "3000-01-01 00:00"
+                IAPManager.shared().memberShipStatus = true
+                IAPManager.shared().memberShipExpiredDay = "3000-01-01 00:00"
                 parentVC.showToast(message: "Success. Restart app to use premium.")
             } else {
                 parentVC.showToast(message: "Error. Voucher not found.")

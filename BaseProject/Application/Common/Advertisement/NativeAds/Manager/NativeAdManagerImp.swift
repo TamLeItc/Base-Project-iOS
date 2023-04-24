@@ -20,7 +20,7 @@ class  NativeAdManagerImp: NSObject, NativeAdManager {
     private var isReloadedAds = false
     
     func loadAd(_ rootVC: UIViewController, nativeAdId: String) {
-        if !AdsHelper.canShowAds {
+        if !AdManager.canShowAds {
             return
         }
         createAdLoader(rootVC: rootVC, nativeAdId: nativeAdId)
@@ -34,7 +34,7 @@ class  NativeAdManagerImp: NSObject, NativeAdManager {
     
     func subsNativeAds() -> Observable<[GADNativeAd]> {
         nativeAdsRelay.map {
-            if AdsHelper.canShowAds {
+            if AdManager.canShowAds {
                 return $0
             }
             return []
@@ -69,7 +69,7 @@ extension NativeAdManagerImp: GADNativeAdLoaderDelegate {
         }
         else {
             print("ADMOB: Finish load ad \(nativeAds.count)")
-            if AdsHelper.canShowAds {
+            if AdManager.canShowAds {
                 return nativeAdsRelay.accept(nativeAds)
             } else {
                 return nativeAdsRelay.accept([])

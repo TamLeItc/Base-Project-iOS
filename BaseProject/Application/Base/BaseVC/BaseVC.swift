@@ -55,7 +55,7 @@ class BaseVC<VM: BaseVM>: UIViewController {
         bindViewModel()
         loadBannerAds()
         
-        
+        viewModel.fetchNativeAds(self)
         
         print("viewDidLoad :: >>>> \(String(describing: self)) <<<<")
     }

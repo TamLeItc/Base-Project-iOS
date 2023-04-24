@@ -91,7 +91,7 @@ extension UIViewController {
     }
     
     func showInAppVC() {
-        if !IAPHelper.shared().isSubscribed() && Configs.InAppPurcharse.enableShowInApp {
+        if !IAPManager.shared().isSubscribed() && Configs.InAppPurcharse.enableShowInApp {
             let inAppVC = InAppProductVC()
             inAppVC.modalTransitionStyle = .crossDissolve
             inAppVC.modalPresentationStyle = .custom

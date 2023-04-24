@@ -1,17 +1,17 @@
-////
-////  AdsUtils.swift
-////  BaseProject
-////
-////  Created by Tam Le on 8/19/20.
-////  Copyright © 2020 Tam Le. All rights reserved.
-////
+//
+//  AdManager.swift
+//  BaseProject
+//
+//  Created by Tam Le on 8/19/20.
+//  Copyright © 2020 Tam Le. All rights reserved.
+//
 //
 import Foundation
 import GoogleMobileAds
 
-class AdsHelper: NSObject {
+class AdManager: NSObject {
     
-    public static let shared: AdsHelper = .init()
+    public static let shared: AdManager = .init()
     
     @Inject
     var intersAd: IntersAdManager
@@ -21,7 +21,7 @@ class AdsHelper: NSObject {
     var appOpenAd: AppOpenAdManager
     
     static var canShowAds: Bool {
-        if !IAPHelper.shared().isSubscribed() && Configs.Advertisement.enableShowAds {
+        if !IAPManager.shared().isSubscribed() && Configs.Advertisement.enableShowAds {
             return true
         } else {
             return false

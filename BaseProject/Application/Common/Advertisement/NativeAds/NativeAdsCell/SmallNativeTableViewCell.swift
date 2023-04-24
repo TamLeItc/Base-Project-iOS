@@ -29,7 +29,7 @@ class SmallNativeTableViewCell: BaseTableViewCell {
         nativeAdView.backgroundColor = .clear
         
         cardView.letIt {
-            $0.backgroundColor = Theme.Colors.neutralPrimary
+            $0.backgroundColor = Theme.Colors.primary
             $0.layer.cornerRadius = 12
             $0.setShadowColor(.clear, for: .normal)
         }

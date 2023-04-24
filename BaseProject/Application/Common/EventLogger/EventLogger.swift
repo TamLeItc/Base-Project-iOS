@@ -8,6 +8,7 @@
 import Foundation
 
 protocol EventLogger: EventLoggerImp {
+    func startWith(_ remoteConfigManager: RemoteConfigManager)
     func configSearchAds()
     func configsAppFlyer()
     func configAdjust()

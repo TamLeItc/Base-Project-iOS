@@ -56,6 +56,9 @@ class BasePageVC<VM: BasePageVM>: UIPageViewController, UIPageViewControllerData
         initViews()
         addEventForViews()
         binViewModel()
+        loadBannerAds()
+        
+        viewModel.fetchNativeAds(self)
         
         if pages.isNotEmpty {
             handleUIChangePage(page: 0)
@@ -127,6 +130,8 @@ class BasePageVC<VM: BasePageVM>: UIPageViewController, UIPageViewControllerData
     func pageChanged(index: Int) {
         
     }
+    
+    func loadBannerAds() {}
     
     /**
      When VC cannot deinit

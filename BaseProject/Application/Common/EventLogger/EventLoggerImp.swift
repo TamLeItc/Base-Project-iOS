@@ -12,11 +12,18 @@ import Alamofire
 import Adjust
 
 class EventLoggerImp: EventLogger {
-    
-    @Inject
-    var remoteConfigManager: RemoteConfigManager
+
+    private var remoteConfigManager: RemoteConfigManager? = nil
     
     private var analyticsData: [String : Any] = [:]
+    
+    func startWith(_ configManager: RemoteConfigManager) {
+        remoteConfigManager = configManager
+        
+        configAdjust()
+        configSearchAds()
+        AppsFlyerLib.shared().start()
+    }
     
     func configSearchAds() {
         recordAppleSearchAds()
@@ -27,7 +34,7 @@ class EventLoggerImp: EventLogger {
     }
     
     func configAdjust() {
-        adjustConfig(remoteConfigManager.getStringValue(fromKey: .AdjustTokenKey))
+        adjustConfig(remoteConfigManager?.getStringValue(fromKey: .AdjustTokenKey) ?? "")
     }
     
     func logEventInApp(_ product: IAPProduct?, type: LogEventType) {
@@ -80,7 +87,7 @@ extension EventLoggerImp {
                 } catch {
                     print("applySearchAdAttribution: AttributionToken error: \(error)")
                 }
-                if let url = URL(string: "\(Configs.Server.searchAdsTrackingBaseURL)/api/v1/") {
+                if let url = URL(string: "https://api-adservices.apple.com/api/v1/") {
                     let request = NSMutableURLRequest(url: url)
                     request.httpMethod = "POST"
                     request.setValue("text/plain", forHTTPHeaderField: "Content-Type")
@@ -156,7 +163,7 @@ extension EventLoggerImp {
     
     //MARK: -- Adjust
     private func logEventAdjustPurchase(productSelected: IAPProduct, needMoney: Double, currency: String) {
-        let event = ADJEvent(eventToken: remoteConfigManager.getStringValue(fromKey: .AdjustTokenKey))
+        let event = ADJEvent(eventToken: remoteConfigManager?.getStringValue(fromKey: .AdjustTokenKey) ?? "")
         event?.setRevenue(needMoney, currency: currency)
         Adjust.trackEvent(event)
     }

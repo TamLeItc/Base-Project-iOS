@@ -117,7 +117,7 @@ class InAppProductVM: BaseVM {
         
         loading.accept(true)
         if product.type == .nonRenewing {
-            IAPHelper.shared().handlePurchase(product: product) { (message, purchaseResult) in
+            IAPManager.shared().handlePurchase(product: product) { (message, purchaseResult) in
                 self.loading.accept(false)
                 switch purchaseResult {
                 case .purchased?:
@@ -129,7 +129,7 @@ class InAppProductVM: BaseVM {
                 }
             }
         } else {
-            IAPHelper.shared().handleSubscription(product: product) { (message, purchaseResult) in
+            IAPManager.shared().handleSubscription(product: product) { (message, purchaseResult) in
                 self.loading.accept(false)
                 switch purchaseResult {
                 case .purchased?:
@@ -145,7 +145,7 @@ class InAppProductVM: BaseVM {
     
     private func restore() {
         loading.accept(true)
-        IAPHelper.shared().purchaseRestore(){ (message, purchaseResult) in
+        IAPManager.shared().purchaseRestore(){ (message, purchaseResult) in
             self.loading.accept(false)
             switch purchaseResult {
             case .purchased?:
