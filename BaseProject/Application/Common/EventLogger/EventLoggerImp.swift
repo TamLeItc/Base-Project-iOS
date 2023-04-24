@@ -80,7 +80,7 @@ extension EventLoggerImp {
                 } catch {
                     print("applySearchAdAttribution: AttributionToken error: \(error)")
                 }
-                if let url = URL(string: "https://api-adservices.apple.com/api/v1/") {
+                if let url = URL(string: "\(Configs.Server.searchAdsTrackingBaseURL)/api/v1/") {
                     let request = NSMutableURLRequest(url: url)
                     request.httpMethod = "POST"
                     request.setValue("text/plain", forHTTPHeaderField: "Content-Type")

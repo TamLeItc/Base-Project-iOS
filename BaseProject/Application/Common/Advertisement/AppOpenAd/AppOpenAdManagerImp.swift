@@ -1,19 +1,17 @@
 //
-//  AppOpenAdsUtils.swift
-//  BaseProject
+//  AppOpenAdManagerImp.swift
+//  i270-locksafe
 //
-//  Created by Tam Le on 10/16/20.
-//  Copyright © 2020 Tam Le. All rights reserved.
+//  Created by Tam Le on 24/04/2023.
 //
 
 import Foundation
 import GoogleMobileAds
 
-class AppOpenAdsHelper: NSObject {
-    
-    static let shared = AppOpenAdsHelper()
+class AppOpenAdManagerImp: NSObject, AppOpenAdManager {
     
     private var appOpenAd: GADAppOpenAd!
+    private var openAppAdId: String = ""
     
     private var loadTime: Date?
     private var timer: Timer?
@@ -23,10 +21,14 @@ class AppOpenAdsHelper: NSObject {
     
     private var onCompleted: (() -> Void)?
     
-    private override init() {}
+    func initWith(_ adId: String) {
+        openAppAdId = adId
+    }
     
-    func tryToPresentAd(_ rootController: UIViewController?,
-                        onCompleted: (() -> Void)? = nil) {
+    func tryToPresentAd(
+        _ rootController: UIViewController?,
+        onCompleted: (() -> Void)?
+    ) {
         self.rootController = rootController
         self.onCompleted = onCompleted
         
@@ -52,7 +54,7 @@ class AppOpenAdsHelper: NSObject {
         }
     }
     
-    func requestAppOpenAd() {
+    private func requestAppOpenAd() {
         
         if (isRequestOpenAd) { return }
         
@@ -64,7 +66,7 @@ class AppOpenAdsHelper: NSObject {
         }
         
         isRequestOpenAd = true
-        GADAppOpenAd.load(withAdUnitID: Configs.Advertisement.openAppAdsId, request: GADRequest(), orientation: UIInterfaceOrientation.portrait, completionHandler: {[self] appOpenAd, error in
+        GADAppOpenAd.load(withAdUnitID: openAppAdId, request: GADRequest(), orientation: UIInterfaceOrientation.portrait, completionHandler: {[self] appOpenAd, error in
             
             isRequestOpenAd = false
             
@@ -115,7 +117,7 @@ class AppOpenAdsHelper: NSObject {
     }
 }
 
-extension AppOpenAdsHelper {
+extension AppOpenAdManagerImp {
     @objc func loadAdTimeout() {
         if isFirstTimeLoadAd {
             handleCompleted()
@@ -124,7 +126,7 @@ extension AppOpenAdsHelper {
     }
 }
 
-extension AppOpenAdsHelper: GADFullScreenContentDelegate {
+extension AppOpenAdManagerImp: GADFullScreenContentDelegate {
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
         print("App Open Ad Present Failed: \(error)")
         handleCompleted()

@@ -1,8 +1,8 @@
 //
-//  SmallCell.swift
-//  AmongUsMarker
+//  MediumCell.swift
+//  ModMarker
 //
-//  Created by Tam Le on 30/12/2020.
+//  Created by Tam Le on 9/30/20.
 //  Copyright © 2020 Tam Le. All rights reserved.
 //
 
@@ -10,8 +10,8 @@ import UIKit
 import GoogleMobileAds
 import MaterialComponents.MaterialCards
 
-class SmallNativeCollectionViewCell: BaseCollectionViewCell {
-
+class MediumNativeCollectionViewCell: BaseCollectionViewCell {
+    
     @IBOutlet weak var adLabel: UILabel!
     @IBOutlet weak var cardView: MDCCard!
     @IBOutlet weak var nativeAdView: GADNativeAdView!
@@ -51,11 +51,11 @@ class SmallNativeCollectionViewCell: BaseCollectionViewCell {
         
         (nativeAdView.callToActionView as? UIButton).map {
             $0.backgroundColor = .clear
-            $0.setTitleColor(Theme.Colors.accent, for: .normal)
+            $0.setTitleColor(Theme.Colors.primary, for: .normal)
             $0.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 13)
             $0.cornerRadius = 8
             $0.borderWidth = 1
-            $0.borderColor = Theme.Colors.accent
+            $0.borderColor = Theme.Colors.primary
         }
         
         nativeAdView.iconView?.cornerRadius = 16

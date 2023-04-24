@@ -1,17 +1,17 @@
 //
-//  SmallNativeTableViewCell.swift
-//  Super minecraft
+//  SmallCell.swift
+//  AmongUsMarker
 //
-//  Created by Petrus on 3/23/20.
-//  Copyright © 2020 Foxcode. All rights reserved.
+//  Created by Tam Le on 30/12/2020.
+//  Copyright © 2020 Tam Le. All rights reserved.
 //
 
 import UIKit
 import GoogleMobileAds
 import MaterialComponents.MaterialCards
 
-class SmallNativeTableViewCell: BaseTableViewCell {
-    
+class SmallNativeCollectionViewCell: BaseCollectionViewCell {
+
     @IBOutlet weak var adLabel: UILabel!
     @IBOutlet weak var cardView: MDCCard!
     @IBOutlet weak var nativeAdView: GADNativeAdView!
@@ -29,13 +29,13 @@ class SmallNativeTableViewCell: BaseTableViewCell {
         nativeAdView.backgroundColor = .clear
         
         cardView.letIt {
-            $0.backgroundColor = .clear
-            $0.layer.cornerRadius = 20
+            $0.backgroundColor = Theme.Colors.neutralPrimary
+            $0.layer.cornerRadius = 12
             $0.setShadowColor(.clear, for: .normal)
         }
         
         (nativeAdView.headlineView as? UILabel).map({
-            $0.textColor = Theme.Colors.secondary
+            $0.textColor = Theme.Colors.textPrimary
             $0.font = UIFont(name: "Poppins-Medium", size: 15)
         })
         
@@ -51,11 +51,11 @@ class SmallNativeTableViewCell: BaseTableViewCell {
         
         (nativeAdView.callToActionView as? UIButton).map {
             $0.backgroundColor = .clear
-            $0.setTitleColor(Theme.Colors.accent, for: .normal)
+            $0.setTitleColor(Theme.Colors.primary, for: .normal)
             $0.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 13)
             $0.cornerRadius = 8
             $0.borderWidth = 1
-            $0.borderColor = Theme.Colors.accent
+            $0.borderColor = Theme.Colors.primary
         }
         
         nativeAdView.iconView?.cornerRadius = 16
@@ -88,4 +88,5 @@ class SmallNativeTableViewCell: BaseTableViewCell {
         
         nativeAdView.callToActionView?.isUserInteractionEnabled = false
     }
+
 }

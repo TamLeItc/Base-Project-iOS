@@ -31,6 +31,11 @@ extension ItemOrAd: IdentifiableType where T: IdentifiableType, T.Identity == St
     }
 }
 
+struct MergeOffset {
+    let pad: Int
+    let phone: Int
+}
+
 //MARK: -- ItemOrAd merge
 
 func mergeData<T>(_ data: [T], with ads: [GADNativeAd], offset: Int = Configs.Advertisement.offsetNativeAdsAndItem) -> [ItemOrAd<T>] {
@@ -75,5 +80,8 @@ func mergeData<T>(_ data: [T], with ads: [GADNativeAd], offset: Int = Configs.Ad
         let ad = totalAds[adIndex]
         merged.append(.ad(ad, position: adIndex))
     }
+    
+    merged.insert(.ad(ads[0], position: 0), at: 0)
+    
     return merged
 }

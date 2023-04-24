@@ -60,6 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.remoteConfigManager.fetchConfig {
                     self.eventLogger.configAdjust()
                 }
+                self.eventLogger.configSearchAds()
             }
         }
     }
@@ -143,7 +144,6 @@ extension AppDelegate {
         AppOpenAdsHelper.shared.tryToPresentAd(rootVC) {
             if rootVC!.isKind(of: SplashVC.self) {
                 self.windowMainConfig()
-                self.eventLogger.configSearchAds()
             }
         }
     }

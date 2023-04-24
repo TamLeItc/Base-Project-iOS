@@ -1,17 +1,17 @@
 //
-//  MediumCell.swift
-//  ModMarker
+//  MediumNativeTableViewCell.swift
+//  Super minecraft
 //
-//  Created by Tam Le on 9/30/20.
-//  Copyright © 2020 Tam Le. All rights reserved.
+//  Created by Petrus on 3/17/20.
+//  Copyright © 2020 Foxcode. All rights reserved.
 //
 
 import UIKit
 import GoogleMobileAds
 import MaterialComponents.MaterialCards
 
-class MediumNativeCollectionViewCell: BaseCollectionViewCell {
-    
+class MediumNativeTableViewCell: BaseTableViewCell {
+
     @IBOutlet weak var adLabel: UILabel!
     @IBOutlet weak var cardView: MDCCard!
     @IBOutlet weak var nativeAdView: GADNativeAdView!
@@ -51,11 +51,11 @@ class MediumNativeCollectionViewCell: BaseCollectionViewCell {
         
         (nativeAdView.callToActionView as? UIButton).map {
             $0.backgroundColor = .clear
-            $0.setTitleColor(Theme.Colors.accent, for: .normal)
+            $0.setTitleColor(Theme.Colors.primary, for: .normal)
             $0.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 13)
             $0.cornerRadius = 8
             $0.borderWidth = 1
-            $0.borderColor = Theme.Colors.accent
+            $0.borderColor = Theme.Colors.primary
         }
         
         nativeAdView.iconView?.cornerRadius = 16

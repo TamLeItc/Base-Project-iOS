@@ -1,15 +1,13 @@
 //
-//  RewardAdHelper.swift
-//  BaseProject
+//  RewardedAdImp.swift
+//  i270-locksafe
 //
-//  Created by Tam Le on 26/03/2021.
-//  Copyright © 2021 Tam Le. All rights reserved.
+//  Created by Tam Le on 24/04/2023.
 //
 
 import GoogleMobileAds
 
-class RewardAdManager: NSObject {
-    
+class RewardedAdManagermp: NSObject, RewardedAdManager {
     private var rewardedInterstitalAd: GADRewardedInterstitialAd!
     
     private var numOfLoadInterstitialAds = 5
@@ -20,15 +18,14 @@ class RewardAdManager: NSObject {
     
     private var hasReward = false
     
-    public init(_ rewardInterstitalAdId: String) {
-        super.init()
-        self.rewardInterstitalAdId = rewardInterstitalAdId
+    func initWith(_ adId: String) {
+        rewardInterstitalAdId = adId
         loadRewardAd()
     }
     
     public func showAd(_ viewController: UIViewController,
-                             onAdClosed: ((_ reward: GADAdReward?) -> Void)? = nil,
-                             onPresentFailed: (() -> Void)? = nil) {
+                             onAdClosed: ((_ reward: GADAdReward?) -> Void)?,
+                             onPresentFailed: (() -> Void)?) {
         
         self.onAdClosed = onAdClosed
         self.onPresentFailed = onPresentFailed
@@ -58,7 +55,7 @@ class RewardAdManager: NSObject {
     }
 }
 
-extension RewardAdManager: GADFullScreenContentDelegate {
+extension RewardedAdManagermp: GADFullScreenContentDelegate {
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
         onPresentFailed?()
         loadRewardAd()

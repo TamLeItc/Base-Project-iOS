@@ -1,40 +1,35 @@
 //
-//  InterstitialAdHelper.swift
-//  BaseProject
+//  IntersAdManagerImp.swift
+//  i270-locksafe
 //
-//  Created by Tam Le on 26/03/2021.
-//  Copyright © 2021 Tam Le. All rights reserved.
+//  Created by Tam Le on 24/04/2023.
 //
 
 import GoogleMobileAds
 
-class InterstitialAdManager: NSObject {
+class IntersAdManagerImp: NSObject, IntersAdManager {
     
     private var interstitialAd: GADInterstitialAd!
-    
-    private var numOfLoadInterstitialAds = 5
     private var interstitialAdId: String!
     
     private var onCompleted: (() -> Void)?
     
-    private let timeDistance = Configs.Advertisement.timedelayShowInterstitalAd
+    private var timeDelay: TimeInterval = 30
     private var lastTimeShowAd = TimeInterval(0)
     
-    public init(_ interstitialAdId: String) {
-        super.init()
-        self.interstitialAdId = interstitialAdId
+    func initWith(_ adId: String, timeDelayForNextShow: TimeInterval) {
+        interstitialAdId = adId
+        timeDelay = timeDelayForNextShow
         loadInterstitalAd()
     }
     
-    public func showAd(_ viewController: UIViewController,
-                                    onCompleted: (() -> Void)? = nil) {
-        
+    func showAd(_ viewController: UIViewController, onCompleted: (() -> Void)?) {
         self.onCompleted = onCompleted
         if canShowInterstitialAd && interstitialAd != nil {
             interstitialAd.present(fromRootViewController: viewController)
             lastTimeShowAd = Date().timeIntervalSince1970
         } else {
-            self.onCompleted?()
+            onCompleted?()
         }
     }
     
@@ -49,11 +44,11 @@ class InterstitialAdManager: NSObject {
     
     private var canShowInterstitialAd: Bool {
         AdsHelper.canShowAds &&
-            Date().timeIntervalSince1970 - lastTimeShowAd > timeDistance
+            Date().timeIntervalSince1970 - lastTimeShowAd > timeDelay
     }
 }
 
-extension InterstitialAdManager: GADFullScreenContentDelegate {
+extension IntersAdManagerImp: GADFullScreenContentDelegate {
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
         onCompleted?()
         loadInterstitalAd()

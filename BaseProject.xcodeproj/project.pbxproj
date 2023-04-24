@@ -8,6 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		8DEAF1C599CA71076622F014 /* Pods_BaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CA42B146981DE2FA515424 /* Pods_BaseProject.framework */; };
+		E616939C29F661EC00721CC6 /* MergeAdLoadMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616938029F661EB00721CC6 /* MergeAdLoadMore.swift */; };
+		E616939D29F661EC00721CC6 /* MergeItemAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616938129F661EB00721CC6 /* MergeItemAds.swift */; };
+		E616939E29F661EC00721CC6 /* MediumNativeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616938329F661EB00721CC6 /* MediumNativeCollectionViewCell.swift */; };
+		E616939F29F661EC00721CC6 /* SmallNativeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616938429F661EB00721CC6 /* SmallNativeCollectionViewCell.swift */; };
+		E61693A029F661EC00721CC6 /* MediumNativeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E616938529F661EB00721CC6 /* MediumNativeTableViewCell.xib */; };
+		E61693A129F661EC00721CC6 /* MediumNativeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E616938629F661EB00721CC6 /* MediumNativeCollectionViewCell.xib */; };
+		E61693A229F661EC00721CC6 /* SmallNativeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E616938729F661EB00721CC6 /* SmallNativeCollectionViewCell.xib */; };
+		E61693A329F661EC00721CC6 /* MediumNativeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616938829F661EB00721CC6 /* MediumNativeTableViewCell.swift */; };
+		E61693A429F661EC00721CC6 /* SmallNativeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616938929F661EB00721CC6 /* SmallNativeTableViewCell.swift */; };
+		E61693A529F661EC00721CC6 /* SmallNativeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E616938A29F661EB00721CC6 /* SmallNativeTableViewCell.xib */; };
+		E61693A629F661EC00721CC6 /* SmallNativeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E616938C29F661EB00721CC6 /* SmallNativeView.xib */; };
+		E61693A729F661EC00721CC6 /* SmallNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616938D29F661EB00721CC6 /* SmallNativeView.swift */; };
+		E61693A829F661EC00721CC6 /* NativeAdManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616938F29F661EB00721CC6 /* NativeAdManagerImp.swift */; };
+		E61693A929F661EC00721CC6 /* NativeAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939029F661EB00721CC6 /* NativeAdManager.swift */; };
+		E61693AA29F661EC00721CC6 /* RewardedAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939229F661EB00721CC6 /* RewardedAdManager.swift */; };
+		E61693AB29F661EC00721CC6 /* RewardedAdManagermp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939329F661EB00721CC6 /* RewardedAdManagermp.swift */; };
+		E61693AC29F661EC00721CC6 /* BannerAd+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939429F661EB00721CC6 /* BannerAd+UIViewController.swift */; };
+		E61693AD29F661EC00721CC6 /* AppOpenAdManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939629F661EC00721CC6 /* AppOpenAdManagerImp.swift */; };
+		E61693AE29F661EC00721CC6 /* AppOpenAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939729F661EC00721CC6 /* AppOpenAdManager.swift */; };
+		E61693AF29F661EC00721CC6 /* AdsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939829F661EC00721CC6 /* AdsHelper.swift */; };
+		E61693B029F661EC00721CC6 /* IntersAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939A29F661EC00721CC6 /* IntersAdManager.swift */; };
+		E61693B129F661EC00721CC6 /* IntersAdManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939B29F661EC00721CC6 /* IntersAdManagerImp.swift */; };
 		E664D80329DD308200EF8C56 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664D80229DD308200EF8C56 /* Inject.swift */; };
 		E6927E8429EFDCD70028DAB3 /* PermissionHelperDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927E8329EFDCD70028DAB3 /* PermissionHelperDelegate.swift */; };
 		E6927E9029EFDDA30028DAB3 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927E8629EFDDA30028DAB3 /* BaseTableViewCell.swift */; };
@@ -25,7 +47,6 @@
 		E6927EA529EFDDF60028DAB3 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927EA429EFDDF60028DAB3 /* AppModule.swift */; };
 		E6927EA829EFE2D10028DAB3 /* RemoteConfigManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927EA729EFE2D10028DAB3 /* RemoteConfigManagerImp.swift */; };
 		E6927EAA29EFE5060028DAB3 /* RemoteConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927EA929EFE5060028DAB3 /* RemoteConfigManager.swift */; };
-		E6927EB029EFEE2E0028DAB3 /* ElementNotFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927EAF29EFEE2E0028DAB3 /* ElementNotFound.swift */; };
 		E6B60E39290247CA00C12F33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6B60D5E290247C900C12F33 /* Localizable.strings */; };
 		E6B60E3A290247CA00C12F33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6B60D60290247C900C12F33 /* Assets.xcassets */; };
 		E6B60E3B290247CA00C12F33 /* Overpass-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6B60D63290247C900C12F33 /* Overpass-Regular.ttf */; };
@@ -114,31 +135,12 @@
 		E6B60EAA290247CA00C12F33 /* ITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60DFD290247C900C12F33 /* ITextField.swift */; };
 		E6B60EAB290247CA00C12F33 /* IntrinsicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60DFE290247C900C12F33 /* IntrinsicTableView.swift */; };
 		E6B60EAC290247CA00C12F33 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60DFF290247C900C12F33 /* GradientView.swift */; };
-		E6B60EAD290247CA00C12F33 /* MergeAdLoadMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E04290247C900C12F33 /* MergeAdLoadMore.swift */; };
-		E6B60EAE290247CA00C12F33 /* MergeItemAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E05290247C900C12F33 /* MergeItemAds.swift */; };
-		E6B60EAF290247CA00C12F33 /* NativeAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E06290247C900C12F33 /* NativeAdManager.swift */; };
-		E6B60EB0290247CA00C12F33 /* MediumNativeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E08290247C900C12F33 /* MediumNativeCollectionViewCell.swift */; };
-		E6B60EB1290247CA00C12F33 /* SmallNativeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E09290247C900C12F33 /* SmallNativeCollectionViewCell.swift */; };
-		E6B60EB2290247CA00C12F33 /* MediumNativeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B60E0A290247C900C12F33 /* MediumNativeTableViewCell.xib */; };
-		E6B60EB3290247CA00C12F33 /* MediumNativeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B60E0B290247C900C12F33 /* MediumNativeCollectionViewCell.xib */; };
-		E6B60EB4290247CA00C12F33 /* SmallNativeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B60E0C290247C900C12F33 /* SmallNativeCollectionViewCell.xib */; };
-		E6B60EB5290247CA00C12F33 /* MediumNativeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E0D290247C900C12F33 /* MediumNativeTableViewCell.swift */; };
-		E6B60EB6290247CA00C12F33 /* SmallNativeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E0E290247C900C12F33 /* SmallNativeTableViewCell.swift */; };
-		E6B60EB7290247CA00C12F33 /* SmallNativeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B60E0F290247C900C12F33 /* SmallNativeTableViewCell.xib */; };
-		E6B60EB8290247CA00C12F33 /* SmallNativeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B60E11290247C900C12F33 /* SmallNativeView.xib */; };
-		E6B60EB9290247CA00C12F33 /* SmallNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E12290247C900C12F33 /* SmallNativeView.swift */; };
-		E6B60EBA290247CA00C12F33 /* BannerAd+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E13290247C900C12F33 /* BannerAd+UIViewController.swift */; };
-		E6B60EBB290247CA00C12F33 /* AdsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E14290247C900C12F33 /* AdsHelper.swift */; };
-		E6B60EBC290247CA00C12F33 /* InterstitialAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E16290247C900C12F33 /* InterstitialAdManager.swift */; };
-		E6B60EBD290247CA00C12F33 /* RewardAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E17290247C900C12F33 /* RewardAdManager.swift */; };
-		E6B60EBE290247CA00C12F33 /* AppOpenAdsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E18290247C900C12F33 /* AppOpenAdsHelper.swift */; };
 		E6B60EBF290247CA00C12F33 /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E19290247C900C12F33 /* UserDefaultHelper.swift */; };
 		E6B60EC0290247CA00C12F33 /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E1A290247C900C12F33 /* FileHelper.swift */; };
 		E6B60EC1290247CA00C12F33 /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E1B290247C900C12F33 /* ReachabilityHelper.swift */; };
 		E6B60EC2290247CA00C12F33 /* ConnectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E1C290247C900C12F33 /* ConnectionHelper.swift */; };
 		E6B60EC4290247CA00C12F33 /* IAPFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E1F290247C900C12F33 /* IAPFormatter.swift */; };
 		E6B60EC5290247CA00C12F33 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E20290247C900C12F33 /* IAPHelper.swift */; };
-		E6B60EC6290247CA00C12F33 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = E6B60E21290247C900C12F33 /* Configuration.storekit */; };
 		E6B60EC7290247CA00C12F33 /* IAPSKProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E22290247C900C12F33 /* IAPSKProduct.swift */; };
 		E6B60EC8290247CA00C12F33 /* IAPProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E23290247C900C12F33 /* IAPProduct.swift */; };
 		E6B60ED0290247CA00C12F33 /* AppDelegate+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B60E30290247CA00C12F33 /* AppDelegate+Notification.swift */; };
@@ -191,6 +193,28 @@
 		7D881323908D2DECBEA8A6C7 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		9184CF6AC8E9FC48B1D815C4 /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		C9CA42B146981DE2FA515424 /* Pods_BaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E616938029F661EB00721CC6 /* MergeAdLoadMore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeAdLoadMore.swift; sourceTree = "<group>"; };
+		E616938129F661EB00721CC6 /* MergeItemAds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeItemAds.swift; sourceTree = "<group>"; };
+		E616938329F661EB00721CC6 /* MediumNativeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumNativeCollectionViewCell.swift; sourceTree = "<group>"; };
+		E616938429F661EB00721CC6 /* SmallNativeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallNativeCollectionViewCell.swift; sourceTree = "<group>"; };
+		E616938529F661EB00721CC6 /* MediumNativeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediumNativeTableViewCell.xib; sourceTree = "<group>"; };
+		E616938629F661EB00721CC6 /* MediumNativeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediumNativeCollectionViewCell.xib; sourceTree = "<group>"; };
+		E616938729F661EB00721CC6 /* SmallNativeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallNativeCollectionViewCell.xib; sourceTree = "<group>"; };
+		E616938829F661EB00721CC6 /* MediumNativeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumNativeTableViewCell.swift; sourceTree = "<group>"; };
+		E616938929F661EB00721CC6 /* SmallNativeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallNativeTableViewCell.swift; sourceTree = "<group>"; };
+		E616938A29F661EB00721CC6 /* SmallNativeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallNativeTableViewCell.xib; sourceTree = "<group>"; };
+		E616938C29F661EB00721CC6 /* SmallNativeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallNativeView.xib; sourceTree = "<group>"; };
+		E616938D29F661EB00721CC6 /* SmallNativeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallNativeView.swift; sourceTree = "<group>"; };
+		E616938F29F661EB00721CC6 /* NativeAdManagerImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdManagerImp.swift; sourceTree = "<group>"; };
+		E616939029F661EB00721CC6 /* NativeAdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdManager.swift; sourceTree = "<group>"; };
+		E616939229F661EB00721CC6 /* RewardedAdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedAdManager.swift; sourceTree = "<group>"; };
+		E616939329F661EB00721CC6 /* RewardedAdManagermp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedAdManagermp.swift; sourceTree = "<group>"; };
+		E616939429F661EB00721CC6 /* BannerAd+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BannerAd+UIViewController.swift"; sourceTree = "<group>"; };
+		E616939629F661EC00721CC6 /* AppOpenAdManagerImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppOpenAdManagerImp.swift; sourceTree = "<group>"; };
+		E616939729F661EC00721CC6 /* AppOpenAdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppOpenAdManager.swift; sourceTree = "<group>"; };
+		E616939829F661EC00721CC6 /* AdsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsHelper.swift; sourceTree = "<group>"; };
+		E616939A29F661EC00721CC6 /* IntersAdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntersAdManager.swift; sourceTree = "<group>"; };
+		E616939B29F661EC00721CC6 /* IntersAdManagerImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntersAdManagerImp.swift; sourceTree = "<group>"; };
 		E664D80229DD308200EF8C56 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
 		E6927E8329EFDCD70028DAB3 /* PermissionHelperDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionHelperDelegate.swift; sourceTree = "<group>"; };
 		E6927E8629EFDDA30028DAB3 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -208,7 +232,6 @@
 		E6927EA429EFDDF60028DAB3 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
 		E6927EA729EFE2D10028DAB3 /* RemoteConfigManagerImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigManagerImp.swift; sourceTree = "<group>"; };
 		E6927EA929EFE5060028DAB3 /* RemoteConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigManager.swift; sourceTree = "<group>"; };
-		E6927EAF29EFEE2E0028DAB3 /* ElementNotFound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ElementNotFound.swift; path = BaseProject/Application/Common/RemoteConfigManager/ElementNotFound.swift; sourceTree = SOURCE_ROOT; };
 		E6B60D462902467900C12F33 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B60D5F290247C900C12F33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E6B60D60290247C900C12F33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -298,31 +321,12 @@
 		E6B60DFD290247C900C12F33 /* ITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITextField.swift; sourceTree = "<group>"; };
 		E6B60DFE290247C900C12F33 /* IntrinsicTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntrinsicTableView.swift; sourceTree = "<group>"; };
 		E6B60DFF290247C900C12F33 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		E6B60E04290247C900C12F33 /* MergeAdLoadMore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeAdLoadMore.swift; sourceTree = "<group>"; };
-		E6B60E05290247C900C12F33 /* MergeItemAds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeItemAds.swift; sourceTree = "<group>"; };
-		E6B60E06290247C900C12F33 /* NativeAdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeAdManager.swift; sourceTree = "<group>"; };
-		E6B60E08290247C900C12F33 /* MediumNativeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumNativeCollectionViewCell.swift; sourceTree = "<group>"; };
-		E6B60E09290247C900C12F33 /* SmallNativeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallNativeCollectionViewCell.swift; sourceTree = "<group>"; };
-		E6B60E0A290247C900C12F33 /* MediumNativeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediumNativeTableViewCell.xib; sourceTree = "<group>"; };
-		E6B60E0B290247C900C12F33 /* MediumNativeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediumNativeCollectionViewCell.xib; sourceTree = "<group>"; };
-		E6B60E0C290247C900C12F33 /* SmallNativeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallNativeCollectionViewCell.xib; sourceTree = "<group>"; };
-		E6B60E0D290247C900C12F33 /* MediumNativeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumNativeTableViewCell.swift; sourceTree = "<group>"; };
-		E6B60E0E290247C900C12F33 /* SmallNativeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallNativeTableViewCell.swift; sourceTree = "<group>"; };
-		E6B60E0F290247C900C12F33 /* SmallNativeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallNativeTableViewCell.xib; sourceTree = "<group>"; };
-		E6B60E11290247C900C12F33 /* SmallNativeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallNativeView.xib; sourceTree = "<group>"; };
-		E6B60E12290247C900C12F33 /* SmallNativeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallNativeView.swift; sourceTree = "<group>"; };
-		E6B60E13290247C900C12F33 /* BannerAd+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BannerAd+UIViewController.swift"; sourceTree = "<group>"; };
-		E6B60E14290247C900C12F33 /* AdsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsHelper.swift; sourceTree = "<group>"; };
-		E6B60E16290247C900C12F33 /* InterstitialAdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialAdManager.swift; sourceTree = "<group>"; };
-		E6B60E17290247C900C12F33 /* RewardAdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardAdManager.swift; sourceTree = "<group>"; };
-		E6B60E18290247C900C12F33 /* AppOpenAdsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppOpenAdsHelper.swift; sourceTree = "<group>"; };
 		E6B60E19290247C900C12F33 /* UserDefaultHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultHelper.swift; sourceTree = "<group>"; };
 		E6B60E1A290247C900C12F33 /* FileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 		E6B60E1B290247C900C12F33 /* ReachabilityHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityHelper.swift; sourceTree = "<group>"; };
 		E6B60E1C290247C900C12F33 /* ConnectionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionHelper.swift; sourceTree = "<group>"; };
 		E6B60E1F290247C900C12F33 /* IAPFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPFormatter.swift; sourceTree = "<group>"; };
 		E6B60E20290247C900C12F33 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
-		E6B60E21290247C900C12F33 /* Configuration.storekit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		E6B60E22290247C900C12F33 /* IAPSKProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPSKProduct.swift; sourceTree = "<group>"; };
 		E6B60E23290247C900C12F33 /* IAPProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPProduct.swift; sourceTree = "<group>"; };
 		E6B60E2E290247C900C12F33 /* BaseProject-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseProject-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -403,6 +407,86 @@
 				C9CA42B146981DE2FA515424 /* Pods_BaseProject.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E616937E29F661EB00721CC6 /* NativeAds */ = {
+			isa = PBXGroup;
+			children = (
+				E616937F29F661EB00721CC6 /* Merge */,
+				E616938229F661EB00721CC6 /* NativeAdsCell */,
+				E616938B29F661EB00721CC6 /* NativeAdsView */,
+				E616938E29F661EB00721CC6 /* Manager */,
+			);
+			path = NativeAds;
+			sourceTree = "<group>";
+		};
+		E616937F29F661EB00721CC6 /* Merge */ = {
+			isa = PBXGroup;
+			children = (
+				E616938029F661EB00721CC6 /* MergeAdLoadMore.swift */,
+				E616938129F661EB00721CC6 /* MergeItemAds.swift */,
+			);
+			path = Merge;
+			sourceTree = "<group>";
+		};
+		E616938229F661EB00721CC6 /* NativeAdsCell */ = {
+			isa = PBXGroup;
+			children = (
+				E616938329F661EB00721CC6 /* MediumNativeCollectionViewCell.swift */,
+				E616938429F661EB00721CC6 /* SmallNativeCollectionViewCell.swift */,
+				E616938529F661EB00721CC6 /* MediumNativeTableViewCell.xib */,
+				E616938629F661EB00721CC6 /* MediumNativeCollectionViewCell.xib */,
+				E616938729F661EB00721CC6 /* SmallNativeCollectionViewCell.xib */,
+				E616938829F661EB00721CC6 /* MediumNativeTableViewCell.swift */,
+				E616938929F661EB00721CC6 /* SmallNativeTableViewCell.swift */,
+				E616938A29F661EB00721CC6 /* SmallNativeTableViewCell.xib */,
+			);
+			path = NativeAdsCell;
+			sourceTree = "<group>";
+		};
+		E616938B29F661EB00721CC6 /* NativeAdsView */ = {
+			isa = PBXGroup;
+			children = (
+				E616938C29F661EB00721CC6 /* SmallNativeView.xib */,
+				E616938D29F661EB00721CC6 /* SmallNativeView.swift */,
+			);
+			path = NativeAdsView;
+			sourceTree = "<group>";
+		};
+		E616938E29F661EB00721CC6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E616938F29F661EB00721CC6 /* NativeAdManagerImp.swift */,
+				E616939029F661EB00721CC6 /* NativeAdManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		E616939129F661EB00721CC6 /* RewardedAd */ = {
+			isa = PBXGroup;
+			children = (
+				E616939229F661EB00721CC6 /* RewardedAdManager.swift */,
+				E616939329F661EB00721CC6 /* RewardedAdManagermp.swift */,
+			);
+			path = RewardedAd;
+			sourceTree = "<group>";
+		};
+		E616939529F661EB00721CC6 /* AppOpenAd */ = {
+			isa = PBXGroup;
+			children = (
+				E616939629F661EC00721CC6 /* AppOpenAdManagerImp.swift */,
+				E616939729F661EC00721CC6 /* AppOpenAdManager.swift */,
+			);
+			path = AppOpenAd;
+			sourceTree = "<group>";
+		};
+		E616939929F661EC00721CC6 /* InterstitialAd */ = {
+			isa = PBXGroup;
+			children = (
+				E616939A29F661EC00721CC6 /* IntersAdManager.swift */,
+				E616939B29F661EC00721CC6 /* IntersAdManagerImp.swift */,
+			);
+			path = InterstitialAd;
 			sourceTree = "<group>";
 		};
 		E664D80129DD307100EF8C56 /* PropertyWrapper */ = {
@@ -627,10 +711,11 @@
 		E6B60DB7290247C900C12F33 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E6B60E01290247C900C12F33 /* Advertisement */,
+				E6B60E1E290247C900C12F33 /* InAppPurchase */,
 				E6927EA629EFE2C20028DAB3 /* RemoteConfigManager */,
 				E6927E9829EFDDDE0028DAB3 /* DataSource */,
 				E6927E9B29EFDDDE0028DAB3 /* EventLogger */,
-				E6C1D0A429D6BDA200E46490 /* Error */,
 				E6B60DB9290247C900C12F33 /* AlertVC */,
 				E6B60DBE290247C900C12F33 /* Rx */,
 				E6B60DB8290247C900C12F33 /* ScopeFunc.swift */,
@@ -841,8 +926,6 @@
 			isa = PBXGroup;
 			children = (
 				E6C1D0A929D6C85500E46490 /* Permission */,
-				E6B60E01290247C900C12F33 /* AdsHelper */,
-				E6B60E1E290247C900C12F33 /* InAppProduct */,
 				E6B60E19290247C900C12F33 /* UserDefaultHelper.swift */,
 				E6B60E1A290247C900C12F33 /* FileHelper.swift */,
 				E6B60E1B290247C900C12F33 /* ReachabilityHelper.swift */,
@@ -851,81 +934,28 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		E6B60E01290247C900C12F33 /* AdsHelper */ = {
+		E6B60E01290247C900C12F33 /* Advertisement */ = {
 			isa = PBXGroup;
 			children = (
-				E6B60E02290247C900C12F33 /* NativeAds */,
-				E6B60E15290247C900C12F33 /* FullScreenAd */,
-				E6B60E13290247C900C12F33 /* BannerAd+UIViewController.swift */,
-				E6B60E14290247C900C12F33 /* AdsHelper.swift */,
-				E6B60E18290247C900C12F33 /* AppOpenAdsHelper.swift */,
+				E616939529F661EB00721CC6 /* AppOpenAd */,
+				E616939929F661EC00721CC6 /* InterstitialAd */,
+				E616937E29F661EB00721CC6 /* NativeAds */,
+				E616939129F661EB00721CC6 /* RewardedAd */,
+				E616939429F661EB00721CC6 /* BannerAd+UIViewController.swift */,
+				E616939829F661EC00721CC6 /* AdsHelper.swift */,
 			);
-			path = AdsHelper;
+			path = Advertisement;
 			sourceTree = "<group>";
 		};
-		E6B60E02290247C900C12F33 /* NativeAds */ = {
-			isa = PBXGroup;
-			children = (
-				E6B60E03290247C900C12F33 /* Merge */,
-				E6B60E06290247C900C12F33 /* NativeAdManager.swift */,
-				E6B60E07290247C900C12F33 /* NativeAdsCell */,
-				E6B60E10290247C900C12F33 /* NativeAdsView */,
-			);
-			path = NativeAds;
-			sourceTree = "<group>";
-		};
-		E6B60E03290247C900C12F33 /* Merge */ = {
-			isa = PBXGroup;
-			children = (
-				E6B60E04290247C900C12F33 /* MergeAdLoadMore.swift */,
-				E6B60E05290247C900C12F33 /* MergeItemAds.swift */,
-			);
-			path = Merge;
-			sourceTree = "<group>";
-		};
-		E6B60E07290247C900C12F33 /* NativeAdsCell */ = {
-			isa = PBXGroup;
-			children = (
-				E6B60E08290247C900C12F33 /* MediumNativeCollectionViewCell.swift */,
-				E6B60E09290247C900C12F33 /* SmallNativeCollectionViewCell.swift */,
-				E6B60E0A290247C900C12F33 /* MediumNativeTableViewCell.xib */,
-				E6B60E0B290247C900C12F33 /* MediumNativeCollectionViewCell.xib */,
-				E6B60E0C290247C900C12F33 /* SmallNativeCollectionViewCell.xib */,
-				E6B60E0D290247C900C12F33 /* MediumNativeTableViewCell.swift */,
-				E6B60E0E290247C900C12F33 /* SmallNativeTableViewCell.swift */,
-				E6B60E0F290247C900C12F33 /* SmallNativeTableViewCell.xib */,
-			);
-			path = NativeAdsCell;
-			sourceTree = "<group>";
-		};
-		E6B60E10290247C900C12F33 /* NativeAdsView */ = {
-			isa = PBXGroup;
-			children = (
-				E6B60E11290247C900C12F33 /* SmallNativeView.xib */,
-				E6B60E12290247C900C12F33 /* SmallNativeView.swift */,
-			);
-			path = NativeAdsView;
-			sourceTree = "<group>";
-		};
-		E6B60E15290247C900C12F33 /* FullScreenAd */ = {
-			isa = PBXGroup;
-			children = (
-				E6B60E16290247C900C12F33 /* InterstitialAdManager.swift */,
-				E6B60E17290247C900C12F33 /* RewardAdManager.swift */,
-			);
-			path = FullScreenAd;
-			sourceTree = "<group>";
-		};
-		E6B60E1E290247C900C12F33 /* InAppProduct */ = {
+		E6B60E1E290247C900C12F33 /* InAppPurchase */ = {
 			isa = PBXGroup;
 			children = (
 				E6B60E1F290247C900C12F33 /* IAPFormatter.swift */,
 				E6B60E20290247C900C12F33 /* IAPHelper.swift */,
-				E6B60E21290247C900C12F33 /* Configuration.storekit */,
 				E6B60E22290247C900C12F33 /* IAPSKProduct.swift */,
 				E6B60E23290247C900C12F33 /* IAPProduct.swift */,
 			);
-			path = InAppProduct;
+			path = InAppPurchase;
 			sourceTree = "<group>";
 		};
 		E6B60E2D290247C900C12F33 /* BrideHeader */ = {
@@ -956,14 +986,6 @@
 				E6B60E35290247CA00C12F33 /* AppRelease.xcconfig */,
 			);
 			path = GlobalDefine;
-			sourceTree = "<group>";
-		};
-		E6C1D0A429D6BDA200E46490 /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				E6927EAF29EFEE2E0028DAB3 /* ElementNotFound.swift */,
-			);
-			path = Error;
 			sourceTree = "<group>";
 		};
 		E6C1D0A929D6C85500E46490 /* Permission */ = {
@@ -1223,38 +1245,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6B60E9A290247CA00C12F33 /* WebviewVC.xib in Resources */,
+				E61693A129F661EC00721CC6 /* MediumNativeCollectionViewCell.xib in Resources */,
 				E6B60E97290247CA00C12F33 /* SplashVC.xib in Resources */,
 				E6B60E4C290247CA00C12F33 /* LaunchScreen.xib in Resources */,
-				E6B60EB8290247CA00C12F33 /* SmallNativeView.xib in Resources */,
 				E6B60EA0290247CA00C12F33 /* NormalInAppCell.xib in Resources */,
 				E6B60E3C290247CA00C12F33 /* Overpass-SemiBold.ttf in Resources */,
+				E61693A029F661EC00721CC6 /* MediumNativeTableViewCell.xib in Resources */,
 				E6B60ED6290247CA00C12F33 /* AppDebug.xcconfig in Resources */,
 				E6B60E8E290247CA00C12F33 /* DemoMainVC.xib in Resources */,
 				E6B60E8B290247CA00C12F33 /* DemoCell.xib in Resources */,
-				E6B60EB7290247CA00C12F33 /* SmallNativeTableViewCell.xib in Resources */,
 				E6B60E86290247CA00C12F33 /* DemoSettingVC.xib in Resources */,
 				E6B60E3F290247CA00C12F33 /* Poppins-Medium.ttf in Resources */,
 				E6B60EA4290247CA00C12F33 /* MainVC.xib in Resources */,
 				E6B60E3B290247CA00C12F33 /* Overpass-Regular.ttf in Resources */,
-				E6B60EC6290247CA00C12F33 /* Configuration.storekit in Resources */,
-				E6B60EB4290247CA00C12F33 /* SmallNativeCollectionViewCell.xib in Resources */,
 				E6B60E3D290247CA00C12F33 /* Overpass-Bold.ttf in Resources */,
+				E61693A229F661EC00721CC6 /* SmallNativeCollectionViewCell.xib in Resources */,
 				E6B60E3A290247CA00C12F33 /* Assets.xcassets in Resources */,
 				E6B60E39290247CA00C12F33 /* Localizable.strings in Resources */,
 				E6B60E91290247CA00C12F33 /* DemoBlurVC.xib in Resources */,
-				E6B60EB2290247CA00C12F33 /* MediumNativeTableViewCell.xib in Resources */,
 				E6B60E41290247CA00C12F33 /* Poppins-SemiBold.ttf in Resources */,
 				E6B60EA1290247CA00C12F33 /* TrialInAppCell.xib in Resources */,
 				E6B60E3E290247CA00C12F33 /* Overpass-ExtraBold.ttf in Resources */,
 				E6B60E9C290247CA00C12F33 /* InAppProductVC.xib in Resources */,
 				E6B60E7C290247CA00C12F33 /* AlertVC.xib in Resources */,
+				E61693A529F661EC00721CC6 /* SmallNativeTableViewCell.xib in Resources */,
 				E6B60ED2290247CA00C12F33 /* GoogleService-Info.plist in Resources */,
 				E6B60E94290247CA00C12F33 /* DemoHomeVC.xib in Resources */,
-				E6B60EB3290247CA00C12F33 /* MediumNativeCollectionViewCell.xib in Resources */,
 				E6B60ED4290247CA00C12F33 /* AppRelease.xcconfig in Resources */,
 				E6B60E8D290247CA00C12F33 /* DemoLoadDataVC.xib in Resources */,
 				E6B60E40290247CA00C12F33 /* Poppins-Regular.ttf in Resources */,
 				E6B60EA7290247CA00C12F33 /* LoadmoreCell.xib in Resources */,
+				E61693A629F661EC00721CC6 /* SmallNativeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1327,6 +1348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6B60E79290247CA00C12F33 /* AlertAction.swift in Sources */,
+				E61693A329F661EC00721CC6 /* MediumNativeTableViewCell.swift in Sources */,
 				E6B60EA5290247CA00C12F33 /* MainVC.swift in Sources */,
 				E6B60E9D290247CA00C12F33 /* InAppProductVC.swift in Sources */,
 				E6FA998929D69607003D56B0 /* ErrorResponse.swift in Sources */,
@@ -1339,21 +1361,21 @@
 				E6927E9229EFDDA30028DAB3 /* BaseNVC.swift in Sources */,
 				E6B60E77290247CA00C12F33 /* Bundle.swift in Sources */,
 				E6B60EA3290247CA00C12F33 /* MainVM.swift in Sources */,
-				E6B60EB6290247CA00C12F33 /* SmallNativeTableViewCell.swift in Sources */,
 				E6B60ED1290247CA00C12F33 /* AppDelegate.swift in Sources */,
 				E6FA998129D69607003D56B0 /* PostDAO.swift in Sources */,
 				E6927E9729EFDDA30028DAB3 /* BaseVM.swift in Sources */,
+				E616939C29F661EC00721CC6 /* MergeAdLoadMore.swift in Sources */,
 				E6B60E99290247CA00C12F33 /* WebviewVM.swift in Sources */,
 				E6FA998A29D69607003D56B0 /* ApiServiceImp.swift in Sources */,
 				E6B60EC4290247CA00C12F33 /* IAPFormatter.swift in Sources */,
 				E6B60E93290247CA00C12F33 /* DemoHomeVM.swift in Sources */,
 				E6FA998D29D69607003D56B0 /* AppNetworkImp.swift in Sources */,
+				E61693B029F661EC00721CC6 /* IntersAdManager.swift in Sources */,
 				E6927E8429EFDCD70028DAB3 /* PermissionHelperDelegate.swift in Sources */,
 				E6FA998F29D69607003D56B0 /* Session.swift in Sources */,
+				E61693A929F661EC00721CC6 /* NativeAdManager.swift in Sources */,
 				E6FA997D29D69607003D56B0 /* RealmRepresentable.swift in Sources */,
 				E6FA998029D69607003D56B0 /* PostDAOImp.swift in Sources */,
-				E6B60EBB290247CA00C12F33 /* AdsHelper.swift in Sources */,
-				E6B60EB1290247CA00C12F33 /* SmallNativeCollectionViewCell.swift in Sources */,
 				E6B60EBF290247CA00C12F33 /* UserDefaultHelper.swift in Sources */,
 				E664D80329DD308200EF8C56 /* Inject.swift in Sources */,
 				E6B60E7A290247CA00C12F33 /* AlertConstants.swift in Sources */,
@@ -1363,9 +1385,12 @@
 				E6FA999129D69607003D56B0 /* EasyDL.swift in Sources */,
 				E6B60E68290247CA00C12F33 /* UIView+Shadow.swift in Sources */,
 				E6927EA029EFDDDE0028DAB3 /* AppDataSourceImp.swift in Sources */,
+				E61693B129F661EC00721CC6 /* IntersAdManagerImp.swift in Sources */,
 				E6927E9F29EFDDDE0028DAB3 /* AppDataSource.swift in Sources */,
 				E6B60E75290247CA00C12F33 /* UIImageView.swift in Sources */,
 				E6B60E82290247CA00C12F33 /* RxBus.swift in Sources */,
+				E616939F29F661EC00721CC6 /* SmallNativeCollectionViewCell.swift in Sources */,
+				E616939D29F661EC00721CC6 /* MergeItemAds.swift in Sources */,
 				E6927EA129EFDDDE0028DAB3 /* EventLogger.swift in Sources */,
 				E6B60E78290247CA00C12F33 /* ScopeFunc.swift in Sources */,
 				E6927EA529EFDDF60028DAB3 /* AppModule.swift in Sources */,
@@ -1373,21 +1398,19 @@
 				E6927E9629EFDDA30028DAB3 /* BaseCollectionViewCell.swift in Sources */,
 				E6B60E74290247CA00C12F33 /* String+Convert.swift in Sources */,
 				E6B60E6A290247CA00C12F33 /* Cell.swift in Sources */,
-				E6B60EAD290247CA00C12F33 /* MergeAdLoadMore.swift in Sources */,
 				E6927EA329EFDDDE0028DAB3 /* EventLoggerImp.swift in Sources */,
 				E6B60E69290247CA00C12F33 /* UIView+Animation.swift in Sources */,
-				E6B60EB5290247CA00C12F33 /* MediumNativeTableViewCell.swift in Sources */,
 				E6B60E5D290247CA00C12F33 /* Logger.swift in Sources */,
 				E6B60E66290247CA00C12F33 /* UIView+Border+Corner.swift in Sources */,
 				E6B60EA9290247CA00C12F33 /* ITextView.swift in Sources */,
+				E61693AC29F661EC00721CC6 /* BannerAd+UIViewController.swift in Sources */,
 				E6FA997429D69607003D56B0 /* LocalRespository.swift in Sources */,
-				E6927EB029EFEE2E0028DAB3 /* ElementNotFound.swift in Sources */,
 				E6B60E63290247CA00C12F33 /* Array.swift in Sources */,
 				E6B60E5E290247CA00C12F33 /* FormatUtils.swift in Sources */,
 				E6C1D0A229D6B74300E46490 /* ApiService.swift in Sources */,
+				E61693AA29F661EC00721CC6 /* RewardedAdManager.swift in Sources */,
 				E6FA994329D69576003D56B0 /* RepositoryModule.swift in Sources */,
 				E6B60ED3290247CA00C12F33 /* Configs.swift in Sources */,
-				E6B60EAE290247CA00C12F33 /* MergeItemAds.swift in Sources */,
 				E6B60EC0290247CA00C12F33 /* FileHelper.swift in Sources */,
 				E6927EA229EFDDDE0028DAB3 /* LogEventType.swift in Sources */,
 				E6B60E67290247CA00C12F33 /* UIView+LoadNib.swift in Sources */,
@@ -1395,17 +1418,16 @@
 				E6B60E81290247CA00C12F33 /* PublishData.swift in Sources */,
 				E6B60ED0290247CA00C12F33 /* AppDelegate+Notification.swift in Sources */,
 				E6B60E80290247CA00C12F33 /* RunLoopThreadScheduler.swift in Sources */,
-				E6B60EAF290247CA00C12F33 /* NativeAdManager.swift in Sources */,
 				E6FA997F29D69607003D56B0 /* DBManager.swift in Sources */,
 				E6927EA829EFE2D10028DAB3 /* RemoteConfigManagerImp.swift in Sources */,
 				E6B60E90290247CA00C12F33 /* DemoMainVC.swift in Sources */,
+				E61693AB29F661EC00721CC6 /* RewardedAdManagermp.swift in Sources */,
 				E6FA997829D69607003D56B0 /* BaseModel.swift in Sources */,
 				E6B60E71290247CA00C12F33 /* UIImage.swift in Sources */,
 				E6FA994229D69576003D56B0 /* ViewModelModule.swift in Sources */,
 				E6FA998829D69607003D56B0 /* PostResponse.swift in Sources */,
 				E6FA997929D69607003D56B0 /* Post.swift in Sources */,
 				E6C1D0AB29D6C87300E46490 /* Permission.swift in Sources */,
-				E6B60EBC290247CA00C12F33 /* InterstitialAdManager.swift in Sources */,
 				E6FA997A29D69607003D56B0 /* RemoteRepositoryImp.swift in Sources */,
 				E6B60E7E290247CA00C12F33 /* ActivityIndicator.swift in Sources */,
 				E6B60E9F290247CA00C12F33 /* TrialInAppCell.swift in Sources */,
@@ -1414,30 +1436,29 @@
 				E6FA998329D69607003D56B0 /* BaseDaoService.swift in Sources */,
 				E6B60E9B290247CA00C12F33 /* WebviewVC.swift in Sources */,
 				E6FA997B29D69607003D56B0 /* LocalRespositoryImp.swift in Sources */,
+				E61693AD29F661EC00721CC6 /* AppOpenAdManagerImp.swift in Sources */,
 				E6B60E65290247CA00C12F33 /* UIView+Visibility.swift in Sources */,
 				E6B60EC1290247CA00C12F33 /* ReachabilityHelper.swift in Sources */,
 				E6927E9429EFDDA30028DAB3 /* BasePageVC.swift in Sources */,
 				E6B60E88290247CA00C12F33 /* DemoSettingVC.swift in Sources */,
-				E6B60EB0290247CA00C12F33 /* MediumNativeCollectionViewCell.swift in Sources */,
 				E6B60E5F290247CA00C12F33 /* AppUtils.swift in Sources */,
 				E6B60E96290247CA00C12F33 /* SplashVC.swift in Sources */,
 				E6B60E8F290247CA00C12F33 /* DemoMainVM.swift in Sources */,
 				E6B60E73290247CA00C12F33 /* String.swift in Sources */,
 				E6B60E84290247CA00C12F33 /* Single+Ext.swift in Sources */,
 				E6B60EA8290247CA00C12F33 /* LoadmoreCell.swift in Sources */,
-				E6B60EBA290247CA00C12F33 /* BannerAd+UIViewController.swift in Sources */,
 				E6B60E76290247CA00C12F33 /* UILabel.swift in Sources */,
 				E6FA994129D69576003D56B0 /* Resolver.swift in Sources */,
 				E6927E9329EFDDA30028DAB3 /* BasePageVM.swift in Sources */,
 				E6B60E72290247CA00C12F33 /* UIViewController.swift in Sources */,
-				E6B60EBD290247CA00C12F33 /* RewardAdManager.swift in Sources */,
 				E6FA998629D69607003D56B0 /* RPost.swift in Sources */,
-				E6B60EBE290247CA00C12F33 /* AppOpenAdsHelper.swift in Sources */,
 				E6FA998E29D69607003D56B0 /* NetworkConfig.swift in Sources */,
 				E6FA999029D69607003D56B0 /* Extensions.swift in Sources */,
 				E6927EAA29EFE5060028DAB3 /* RemoteConfigManager.swift in Sources */,
+				E61693AE29F661EC00721CC6 /* AppOpenAdManager.swift in Sources */,
 				E6FA99AA29D6A677003D56B0 /* NetworkModule.swift in Sources */,
 				E6B60E8C290247CA00C12F33 /* DemoLoadDataVM.swift in Sources */,
+				E61693A429F661EC00721CC6 /* SmallNativeTableViewCell.swift in Sources */,
 				E6B60E95290247CA00C12F33 /* DemoHomeVC.swift in Sources */,
 				E6B60E7B290247CA00C12F33 /* AlertVC.swift in Sources */,
 				E6B60EA6290247CA00C12F33 /* PulsatingButton.swift in Sources */,
@@ -1447,8 +1468,8 @@
 				E6B60EC5290247CA00C12F33 /* IAPHelper.swift in Sources */,
 				E6C1D0A829D6C84100E46490 /* PermissionHelper.swift in Sources */,
 				E6B60E89290247CA00C12F33 /* DemoLoadDataVC.swift in Sources */,
+				E616939E29F661EC00721CC6 /* MediumNativeCollectionViewCell.swift in Sources */,
 				E6B60EC2290247CA00C12F33 /* ConnectionHelper.swift in Sources */,
-				E6B60EB9290247CA00C12F33 /* SmallNativeView.swift in Sources */,
 				E6FA997E29D69607003D56B0 /* Reactive.swift in Sources */,
 				E6B60E70290247CA00C12F33 /* UIButton.swift in Sources */,
 				E6FA99A329D69DCB003D56B0 /* NetworkProvider.swift in Sources */,
@@ -1457,6 +1478,8 @@
 				E6B60E7F290247CA00C12F33 /* Observable+Ext.swift in Sources */,
 				E6B60E98290247CA00C12F33 /* SplashVM.swift in Sources */,
 				E6B60EAA290247CA00C12F33 /* ITextField.swift in Sources */,
+				E61693A729F661EC00721CC6 /* SmallNativeView.swift in Sources */,
+				E61693AF29F661EC00721CC6 /* AdsHelper.swift in Sources */,
 				E6927E9129EFDDA30028DAB3 /* BaseVC.swift in Sources */,
 				E6B60EC7290247CA00C12F33 /* IAPSKProduct.swift in Sources */,
 				E6B60E7D290247CA00C12F33 /* ErrorTracker.swift in Sources */,
@@ -1466,6 +1489,7 @@
 				E6FA997C29D69607003D56B0 /* ModelConvertibleType.swift in Sources */,
 				E6FA998429D69607003D56B0 /* BaseDao.swift in Sources */,
 				E6B60EAC290247CA00C12F33 /* GradientView.swift in Sources */,
+				E61693A829F661EC00721CC6 /* NativeAdManagerImp.swift in Sources */,
 				E6B60E6D290247CA00C12F33 /* UITableView.swift in Sources */,
 				E6927E9029EFDDA30028DAB3 /* BaseTableViewCell.swift in Sources */,
 				E6FA994029D69576003D56B0 /* DI.swift in Sources */,
