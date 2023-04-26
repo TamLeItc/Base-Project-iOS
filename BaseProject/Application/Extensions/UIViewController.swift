@@ -28,7 +28,11 @@ extension UIViewController {
         Loaf(message, location: .top, sender: self).show()
     }
     
-    func showError(_ message: String = "general_error_message".localized, onClick: (() -> Void)? = nil) {
+    func showGeneralError(onClick: (() -> Void)? = nil) {
+        AlertVC.showMessage(self, style: .error, message: "general_error_message".localized, onClick: onClick)
+    }
+    
+    func showError(_ message: String, onClick: (() -> Void)? = nil) {
         AlertVC.showMessage(self, style: .error, message: message, onClick: onClick)
     }
     

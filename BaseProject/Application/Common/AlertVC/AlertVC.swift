@@ -309,7 +309,11 @@ extension AlertVC {
 }
 
 extension AlertVC {
-    static func showMessage(_ parentVC: UIViewController, title: String? = nil, style: AlertMessageTyle? = nil,  message: String, onClick: (() -> Void)? = nil) {
+    static func showMessage(_ rootVC: UIViewController, message: AlertMessage) {
+        showMessage(rootVC, style: message.type, message: message.description)
+    }
+    
+    static func showMessage(_ rootVC: UIViewController, title: String? = nil, style: AlertMessageType? = nil,  message: String, onClick: (() -> Void)? = nil) {
         
         if title == nil && style == nil {
             fatalError("Title can't nil")
@@ -338,6 +342,6 @@ extension AlertVC {
         alert.addAction(AlertAction(title: "ok".localized, style: .normal, onClick: {_ in
             onClick?()
         }))
-        parentVC.presentVC(alert)
+        rootVC.presentVC(alert)
     }
 }

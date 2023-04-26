@@ -20,37 +20,42 @@ enum RemoteConfigDefault {
 
 class RemoteConfigManagerImp: RemoteConfigManager {
     
-    private var remoteConfig: RemoteConfig
+    private var remoteConfig: RemoteConfig? = nil
     
-    init() {
-        remoteConfig = RemoteConfig.remoteConfig()
-    }
+    private var remoteConfigFetched = false
     
     func fetchConfig(_ onCompleted: (() -> Void)?) {
+        
+        if (remoteConfigFetched) {
+            return
+        }
+        remoteConfigFetched = true
+        
         remoteConfig = RemoteConfig.remoteConfig()
         setDefaultValue()
         
-        remoteConfig.fetch() { status, error in
+        remoteConfig?.fetch() { status, error in
             if status == .success {
-                self.remoteConfig.activate(completion: nil)
-                self.printRemoteValue()
+                
             } else {
                 print("RemoteConfigHelper: Config Not Fetched")
             }
+            self.remoteConfig?.activate(completion: nil)
+            self.printRemoteValue()
             onCompleted?()
         }
     }
     
     func getStringValue(fromKey key: RemoteConfigKey) -> String {
-        return remoteConfig.configValue(forKey: key.rawValue).stringValue ?? ""
+        return remoteConfig?.configValue(forKey: key.rawValue).stringValue ?? ""
     }
     
     func getNumberValue(fromKey key: RemoteConfigKey) -> NSNumber {
-        return remoteConfig.configValue(forKey: key.rawValue).numberValue
+        return remoteConfig?.configValue(forKey: key.rawValue).numberValue ?? 0
     }
     
     private func setDefaultValue() {
-        remoteConfig.setDefaults([
+        remoteConfig?.setDefaults([
             RemoteConfigKey.AdjustTokenKey.rawValue: RemoteConfigDefault.adjustToken,
             RemoteConfigKey.AdjustTokenPurchaseKey.rawValue: RemoteConfigDefault.adjustTokenPurchase,
         ])

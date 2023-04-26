@@ -62,7 +62,7 @@ enum AlertActionStyle {
     case destructive
 }
 
-enum AlertMessageTyle {
+enum AlertMessageType {
     case warning
     case info
     case error

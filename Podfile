@@ -56,6 +56,8 @@ target 'BaseProject' do
   #adjust
   pod 'Adjust', '~> 4.33.3'
   
+  pod 'FoxEventLogger'
+  
   post_install do |pi|
       pi.pods_project.targets.each do |t|
           t.build_configurations.each do |config|

@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol EventLogger: EventLoggerImp {
+protocol EventLogger {
     func startWith(_ remoteConfigManager: RemoteConfigManager)
     func configSearchAds()
     func configsAppFlyer()

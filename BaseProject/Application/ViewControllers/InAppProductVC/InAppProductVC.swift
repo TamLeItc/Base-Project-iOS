@@ -136,11 +136,6 @@ class InAppProductVC: BaseVC<InAppProductVM> {
                 self.dismiss(animated: true)
             })
         }).disposed(by: bag)
-        
-        viewModel.errorMessage.asObservable().subscribe(onNext: {[weak self] message in
-            guard let self = self else { return }
-            AlertVC.showMessage(self, style: .error, message: message)
-        }).disposed(by: bag)
 
         viewModel.purchased.asObservable().subscribe(onNext: {[weak self] message in
             guard let self = self else { return }

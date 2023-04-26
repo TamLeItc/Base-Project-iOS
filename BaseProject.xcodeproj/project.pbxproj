@@ -31,6 +31,8 @@
 		E61693B029F661EC00721CC6 /* IntersAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939A29F661EC00721CC6 /* IntersAdManager.swift */; };
 		E61693B129F661EC00721CC6 /* IntersAdManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616939B29F661EC00721CC6 /* IntersAdManagerImp.swift */; };
 		E61693B329F6779C00721CC6 /* AdModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61693B229F6779C00721CC6 /* AdModule.swift */; };
+		E63ECBCA29F9196100BA6D6F /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63ECBC929F9196100BA6D6F /* BaseError.swift */; };
+		E63ECBCC29F919B200BA6D6F /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63ECBCB29F919B200BA6D6F /* AlertMessage.swift */; };
 		E664D80329DD308200EF8C56 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664D80229DD308200EF8C56 /* Inject.swift */; };
 		E6927E8429EFDCD70028DAB3 /* PermissionHelperDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927E8329EFDCD70028DAB3 /* PermissionHelperDelegate.swift */; };
 		E6927E9029EFDDA30028DAB3 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927E8629EFDDA30028DAB3 /* BaseTableViewCell.swift */; };
@@ -217,6 +219,8 @@
 		E616939A29F661EC00721CC6 /* IntersAdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntersAdManager.swift; sourceTree = "<group>"; };
 		E616939B29F661EC00721CC6 /* IntersAdManagerImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntersAdManagerImp.swift; sourceTree = "<group>"; };
 		E61693B229F6779C00721CC6 /* AdModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdModule.swift; sourceTree = "<group>"; };
+		E63ECBC929F9196100BA6D6F /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
+		E63ECBCB29F919B200BA6D6F /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		E664D80229DD308200EF8C56 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
 		E6927E8329EFDCD70028DAB3 /* PermissionHelperDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionHelperDelegate.swift; sourceTree = "<group>"; };
 		E6927E8629EFDDA30028DAB3 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -491,6 +495,14 @@
 			path = InterstitialAd;
 			sourceTree = "<group>";
 		};
+		E63ECBC829F9192E00BA6D6F /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				E63ECBC929F9196100BA6D6F /* BaseError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		E664D80129DD307100EF8C56 /* PropertyWrapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -713,6 +725,7 @@
 		E6B60DB7290247C900C12F33 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E63ECBC829F9192E00BA6D6F /* Error */,
 				E6B60E01290247C900C12F33 /* Advertisement */,
 				E6B60E1E290247C900C12F33 /* InAppPurchase */,
 				E6927EA629EFE2C20028DAB3 /* RemoteConfigManager */,
@@ -732,6 +745,7 @@
 				E6B60DBB290247C900C12F33 /* AlertConstants.swift */,
 				E6B60DBC290247C900C12F33 /* AlertVC.swift */,
 				E6B60DBD290247C900C12F33 /* AlertVC.xib */,
+				E63ECBCB29F919B200BA6D6F /* AlertMessage.swift */,
 			);
 			path = AlertVC;
 			sourceTree = "<group>";
@@ -1361,6 +1375,7 @@
 				E6B60E92290247CA00C12F33 /* DemoBlurVC.swift in Sources */,
 				E6FA994429D69576003D56B0 /* DatabaseModule.swift in Sources */,
 				E6B60E9E290247CA00C12F33 /* NormalInAppCell.swift in Sources */,
+				E63ECBCA29F9196100BA6D6F /* BaseError.swift in Sources */,
 				E6927E9229EFDDA30028DAB3 /* BaseNVC.swift in Sources */,
 				E6B60E77290247CA00C12F33 /* Bundle.swift in Sources */,
 				E6B60EA3290247CA00C12F33 /* MainVM.swift in Sources */,
@@ -1412,6 +1427,7 @@
 				E6B60E5E290247CA00C12F33 /* FormatUtils.swift in Sources */,
 				E6C1D0A229D6B74300E46490 /* ApiService.swift in Sources */,
 				E61693AA29F661EC00721CC6 /* RewardedAdManager.swift in Sources */,
+				E63ECBCC29F919B200BA6D6F /* AlertMessage.swift in Sources */,
 				E6FA994329D69576003D56B0 /* RepositoryModule.swift in Sources */,
 				E6B60ED3290247CA00C12F33 /* Configs.swift in Sources */,
 				E6B60EC0290247CA00C12F33 /* FileHelper.swift in Sources */,

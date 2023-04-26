@@ -16,11 +16,9 @@ class BaseVM: NSObject {
     
     let subscriptionSucceed = PublishData<Bool>()
     let indicatorLoading = ActivityIndicator()
-    let loadingData = PublishData<Bool>()
     let errorTracker = ErrorTracker()
-    let infoMessage = PublishData<String>()
-    let warningMessage = PublishData<String>()
-    let errorMessage = PublishData<String>()
+    let loadingData = PublishData<Bool>()
+    let messageData = PublishData<AlertMessage>()
     let showInAppData = PublishData<Void>()
     let showWebviewData = PublishData<String>()
     

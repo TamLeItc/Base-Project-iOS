@@ -124,7 +124,7 @@ class InAppProductVM: BaseVM {
                     self.purchased.accept(message)
                     self.eventLogger.logEventInApp(product, type: .inapp)
                 default:
-                    self.errorMessage.accept(message)
+                    self.messageData.accept(AlertMessage(type: .error, description: message))
                     break
                 }
             }
@@ -136,7 +136,7 @@ class InAppProductVM: BaseVM {
                     self.purchased.accept(message)
                     self.eventLogger.logEventInApp(product, type: .subcription)
                 default:
-                    self.errorMessage.accept(message)
+                    self.messageData.accept(AlertMessage(type: .error, description: message))
                     break
                 }
             }
@@ -152,7 +152,7 @@ class InAppProductVM: BaseVM {
                 self.purchased.accept(message)
                 self.eventLogger.logEventInApp(nil, type: .restore)
             default:
-                self.errorMessage.accept(message)
+                self.messageData.accept(AlertMessage(type: .error, description: message))
                 break
             }
         }

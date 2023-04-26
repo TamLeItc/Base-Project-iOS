@@ -34,7 +34,7 @@ class BaseVC<VM: BaseVM>: UIViewController {
         return isLightForegroundStatusBar ? .lightContent : .default
     }
     
-    private var isShowDialogFeedback = false
+    private var isFeedbackDialogShowed = false
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -134,32 +134,22 @@ class BaseVC<VM: BaseVM>: UIViewController {
             .disposed(by: bag)
         
         viewModel.errorTracker
-            .drive(onNext: {[weak self] error in
-                guard let self = self else { return }
-                Logger.error(error.localizedDescription)
-                if (!ConnectionHelper.shared.isInternetAvailable()) {
-                    self.showError("no_network_connect_message".localized)
+            .map { error in
+                if let error = error as? BaseError, error.description.isNotEmpty {
+                    return error.description
                 } else {
-                    self.showError()
+                    return "general_error_message".localized
                 }
-            }).disposed(by: bag)
-        
-        viewModel.errorMessage
-            .subscribe(onNext: {[weak self] error in
+            }
+            .drive(onNext: {[weak self] errorMessage in
                 guard let self = self else { return }
-                self.showError(error)
+                self.showError(errorMessage)
             }).disposed(by: bag)
         
-        viewModel.warningMessage
+        viewModel.messageData
             .subscribe(onNext: {[weak self] message in
                 guard let self = self else { return }
-                AlertVC.showMessage(self, style: .warning, message: message)
-            }).disposed(by: bag)
-        
-        viewModel.infoMessage
-            .subscribe(onNext: {[weak self] message in
-                guard let self = self else { return }
-                AlertVC.showMessage(self, style: .info, message: message)
+                AlertVC.showMessage(self, message: message)
             }).disposed(by: bag)
         
         viewModel.showInAppData
@@ -185,7 +175,10 @@ class BaseVC<VM: BaseVM>: UIViewController {
     func clearAll() {}
     
     func showFeedbackDialog() {
-        if UserDefaultHelper.shared.isFeedback && !isShowDialogFeedback {
+        if (isFeedbackDialogShowed) {
+            return
+        }
+        if UserDefaultHelper.shared.isReviewed {
             AppUtils.rateForApp()
         } else {
             let alert = AlertVC(title: "review_app_title".localized, message: "review_app_message".localized, style: .alert)
@@ -194,9 +187,10 @@ class BaseVC<VM: BaseVM>: UIViewController {
             }))
             alert.addAction(AlertAction(title: "review".localized, style: .confirm, onClick: {_ in
                 AppUtils.openReviewAppInStore()
-                UserDefaultHelper.shared.isFeedback = true
+                UserDefaultHelper.shared.isReviewed = true
             }))
-            self.presentVC(alert)
+            isFeedbackDialogShowed = true
+            presentVC(alert)
         }
     }
     

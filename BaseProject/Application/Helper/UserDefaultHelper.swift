@@ -12,7 +12,7 @@ private enum UserDefaultKey {
     static let firstOpenApp = "firstOpenApp"
     static let hourToPushLocalNoti = "hourToPushLocalNoti"
     static let apiToken = "apiToken"
-    static let isFeedback = "isFeedback"
+    static let isReviewed = "isReviewed"
 }
 
 class UserDefaultHelper {
@@ -39,12 +39,12 @@ class UserDefaultHelper {
         }
     }
     
-    var isFeedback: Bool {
+    var isReviewed: Bool {
         set(newValue) {
-            preferences!.set(newValue, forKey: UserDefaultKey.isFeedback)
+            preferences!.set(newValue, forKey: UserDefaultKey.isReviewed)
         }
         get {
-            return value(forKey: UserDefaultKey.isFeedback) ?? false
+            return value(forKey: UserDefaultKey.isReviewed) ?? false
         }
     }
 }

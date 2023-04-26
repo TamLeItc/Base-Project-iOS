@@ -113,7 +113,7 @@ extension EventLoggerImp {
                                     logData["creativeSetId"] = data["creativeSetId"]
                                 }
                                 logData["attribution"] = UIDevice.current.systemVersion
-                                print("applySearchAdAttribution: analyticsData>>>>>>>>>>>")
+                                print("LogEventHelper: analyticsData>>>>>>>>>>>")
                                 print(logData)
                                 self.analyticsData = logData
                             }
@@ -163,7 +163,7 @@ extension EventLoggerImp {
     
     //MARK: -- Adjust
     private func logEventAdjustPurchase(productSelected: IAPProduct, needMoney: Double, currency: String) {
-        let event = ADJEvent(eventToken: remoteConfigManager?.getStringValue(fromKey: .AdjustTokenKey) ?? "")
+        let event = ADJEvent(eventToken: remoteConfigManager?.getStringValue(fromKey: .AdjustTokenPurchaseKey) ?? "")
         event?.setRevenue(needMoney, currency: currency)
         Adjust.trackEvent(event)
     }
