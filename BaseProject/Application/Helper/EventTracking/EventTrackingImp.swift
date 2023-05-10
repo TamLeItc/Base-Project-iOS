@@ -1,5 +1,5 @@
 //
-//  EventLoggerImp.swift
+//  EventTrackingImp.swift
 //  i270-locksafe
 //
 //  Created by Tam Le on 13/04/2023.
@@ -11,7 +11,7 @@ import AdServices
 import Alamofire
 import Adjust
 
-class EventLoggerImp: EventLogger {
+class EventTrackingImp: EventTracking {
 
     private var remoteConfigManager: RemoteConfigManager? = nil
     
@@ -37,7 +37,7 @@ class EventLoggerImp: EventLogger {
         adjustConfig(remoteConfigManager?.getStringValue(fromKey: .AdjustTokenKey) ?? "")
     }
     
-    func logEventInApp(_ product: IAPProduct?, type: LogEventType) {
+    func logEventInApp(_ product: IAPProduct?, type: EventTrackingType) {
         if (type == .restore) {
             logServerSearchAds(purchaseName: "restore")
         } else {
@@ -56,7 +56,7 @@ class EventLoggerImp: EventLogger {
     }
 }
 
-extension EventLoggerImp {
+extension EventTrackingImp {
     private func adjustConfig(_ appToken: String) {
 #if DEBUG
         let environment = ADJEnvironmentSandbox as String
@@ -128,7 +128,7 @@ extension EventLoggerImp {
     }
 }
 
-extension EventLoggerImp {
+extension EventTrackingImp {
     //MARK: -- Log Server search ads
     private func logServerSearchAds(purchaseName: String) {
         analyticsData["purchase"] = purchaseName

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LogEventType: String {
+enum EventTrackingType: String {
     case subcription = "Subscription"
     case inapp = "InApp"
     case restore = "Restore"

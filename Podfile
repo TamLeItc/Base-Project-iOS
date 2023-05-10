@@ -59,9 +59,14 @@ target 'BaseProject' do
   pod 'FoxEventLogger'
   
   post_install do |pi|
-      pi.pods_project.targets.each do |t|
-          t.build_configurations.each do |config|
+      pi.pods_project.targets.each do |target|
+          target.build_configurations.each do |config|
               config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+          end
+          if target.respond_to?(:product_type) and target.product_type == "com.apple.product-type.bundle"
+            target.build_configurations.each do |config|
+                config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+            end
           end
       end
   end

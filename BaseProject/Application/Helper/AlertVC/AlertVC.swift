@@ -262,8 +262,7 @@ class AlertVC: UIViewController {
         button.rx.tap
             .subscribe(onNext: {[weak self] in
                 guard let self = self else { return }
-                if action.style == .confirm
-                    && self.showInputView
+                if self.showInputView
                     && !self.enableEmptyInput
                     && (self.alertInputTextField.text ?? "").isEmpty {
                     return

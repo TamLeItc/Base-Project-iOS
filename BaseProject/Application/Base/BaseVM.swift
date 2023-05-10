@@ -42,6 +42,14 @@ class BaseVM: NSObject {
         registerLisenBusEvent()
     }
     
+    func registerLisenBusEvent()  {}
+    
+    deinit {
+        print("deinit viewmodel :: >>>> \(String(describing: self)) <<<<")
+    }
+}
+
+extension BaseVM {
     func fetchNativeAds(_ rootVC: UIViewController) {
         nativeAdManager.loadAd(rootVC, nativeAdId: Configs.Advertisement.admobNativeAdId)
     }
@@ -70,11 +78,5 @@ class BaseVM: NSObject {
                     return (items: items, mergeList: mergeData(items, with: ads, offset: offset.phone))
                 }
             }
-    }
-    
-    func registerLisenBusEvent()  {}
-    
-    deinit {
-        print("deinit viewmodel :: >>>> \(String(describing: self)) <<<<")
     }
 }

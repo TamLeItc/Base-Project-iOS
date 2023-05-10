@@ -20,7 +20,7 @@ import AppsFlyerLib
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     @Inject
-    var eventLogger: EventLogger
+    var eventTracking: EventTracking
     @Inject
     var remoteConfigManager: RemoteConfigManager
     @Inject
@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mkProgressConfig()
         setupKingfisher()
         
-        eventLogger.configSearchAds()
+        eventTracking.configSearchAds()
         
         return true
     }
@@ -59,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             DispatchQueue.main.async {
                 self.openAppAdsConfigPresent()
                 self.remoteConfigManager.fetchConfig {
-                    self.eventLogger.startWith(self.remoteConfigManager)
+                    self.eventTracking.startWith(self.remoteConfigManager)
                 }
             }
         }

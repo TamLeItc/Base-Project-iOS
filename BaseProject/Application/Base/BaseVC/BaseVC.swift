@@ -174,6 +174,20 @@ class BaseVC<VM: BaseVM>: UIViewController {
      */
     func clearAll() {}
     
+    @objc func keyboardWillShow(notification: NSNotification) {
+        keyboardIsShow = true
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        keyboardIsShow = false
+    }
+    
+    deinit {
+        print("deinit :: >>>> \(String(describing: self)) <<<<")
+    }
+}
+
+extension BaseVC {
     func showFeedbackDialog() {
         if (isFeedbackDialogShowed) {
             return
@@ -192,27 +206,5 @@ class BaseVC<VM: BaseVM>: UIViewController {
             isFeedbackDialogShowed = true
             presentVC(alert)
         }
-    }
-    
-    @objc func keyboardWillShow(notification: NSNotification) {
-        keyboardIsShow = true
-    }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {
-        keyboardIsShow = false
-    }
-    
-    deinit {
-        print("deinit :: >>>> \(String(describing: self)) <<<<")
-    }
-}
-
-extension BaseVC {
-    static func instantiate(nibName: String) -> Self {
-        func instantiateFromNib<T: UIViewController>(nibName: String) -> T {
-            return T.init(nibName: String(describing: nibName), bundle: nil)
-        }
-        
-        return instantiateFromNib(nibName: nibName)
     }
 }

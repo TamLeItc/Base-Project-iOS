@@ -21,7 +21,4 @@ class MainVC: BaseVC<MainVM> {
                 self.pushVC(DemoMainVC())
             }).disposed(by: bag)
     }
-    
-    
-
 }
