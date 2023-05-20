@@ -74,8 +74,8 @@ extension AppDelegate {
     private func windowSplashConfig() {
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        self.window?.rootViewController = SplashVC()
-        self.window?.makeKeyAndVisible()
+        window?.rootViewController = SplashVC()
+        window?.makeKeyAndVisible()
     }
     
     func windowMainConfig() {

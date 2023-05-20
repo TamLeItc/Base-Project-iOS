@@ -36,15 +36,15 @@ class AppDataSourceImp: AppDataSource {
                     return tableView.dequeueReuseable(ofType: DemoCell.self, indexPath: indexPath).apply {
                         $0.configureCell(item )
                         if indexPath.row % 2 == 0 {
-                            $0.contentView.backgroundColor = "colorPrimary".toUIColor
+                            $0.contentView.backgroundColor = "colorPrimary".toUIColor()
                         } else {
-                            $0.contentView.backgroundColor = "colorPrimaryDark".toUIColor
+                            $0.contentView.backgroundColor = "colorPrimaryDark".toUIColor()
                         }
                     }
                 case .ad(let ad, _):
-                    let cell = tableView.dequeueReusableCell(withIdentifier: MediumNativeTableViewCell.identifier) as! MediumNativeTableViewCell
-                    cell.configure(with: ad)
-                    return cell
+                    return tableView.dequeueReuseable(ofType: MediumNativeTableViewCell.self, indexPath: indexPath).apply {
+                        $0.configure(with: ad)
+                    }
                 }
         })
     }

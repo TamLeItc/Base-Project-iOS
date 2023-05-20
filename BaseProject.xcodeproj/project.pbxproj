@@ -164,7 +164,6 @@
 		E6FA994429D69576003D56B0 /* DatabaseModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FA993F29D69576003D56B0 /* DatabaseModule.swift */; };
 		E6FA997429D69607003D56B0 /* LocalRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FA994729D69607003D56B0 /* LocalRespository.swift */; };
 		E6FA997529D69607003D56B0 /* RemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FA994829D69607003D56B0 /* RemoteRepository.swift */; };
-		E6FA997829D69607003D56B0 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FA994C29D69607003D56B0 /* BaseModel.swift */; };
 		E6FA997929D69607003D56B0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FA994D29D69607003D56B0 /* Post.swift */; };
 		E6FA997A29D69607003D56B0 /* RemoteRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FA995029D69607003D56B0 /* RemoteRepositoryImp.swift */; };
 		E6FA997B29D69607003D56B0 /* LocalRespositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FA995129D69607003D56B0 /* LocalRespositoryImp.swift */; };
@@ -177,7 +176,6 @@
 		E6FA998329D69607003D56B0 /* BaseDaoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FA995F29D69607003D56B0 /* BaseDaoService.swift */; };
 		E6FA998429D69607003D56B0 /* BaseDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FA996029D69607003D56B0 /* BaseDao.swift */; };
 		E6FA998629D69607003D56B0 /* RPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FA996329D69607003D56B0 /* RPost.swift */; };
-		E6FA998729D69607003D56B0 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FA996629D69607003D56B0 /* BaseResponse.swift */; };
 		E6FA998829D69607003D56B0 /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FA996729D69607003D56B0 /* PostResponse.swift */; };
 		E6FA998929D69607003D56B0 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FA996829D69607003D56B0 /* ErrorResponse.swift */; };
 		E6FA998A29D69607003D56B0 /* ApiServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FA996929D69607003D56B0 /* ApiServiceImp.swift */; };
@@ -356,7 +354,6 @@
 		E6FA993F29D69576003D56B0 /* DatabaseModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseModule.swift; sourceTree = "<group>"; };
 		E6FA994729D69607003D56B0 /* LocalRespository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalRespository.swift; sourceTree = "<group>"; };
 		E6FA994829D69607003D56B0 /* RemoteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteRepository.swift; sourceTree = "<group>"; };
-		E6FA994C29D69607003D56B0 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		E6FA994D29D69607003D56B0 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E6FA995029D69607003D56B0 /* RemoteRepositoryImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteRepositoryImp.swift; sourceTree = "<group>"; };
 		E6FA995129D69607003D56B0 /* LocalRespositoryImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalRespositoryImp.swift; sourceTree = "<group>"; };
@@ -369,7 +366,6 @@
 		E6FA995F29D69607003D56B0 /* BaseDaoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDaoService.swift; sourceTree = "<group>"; };
 		E6FA996029D69607003D56B0 /* BaseDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDao.swift; sourceTree = "<group>"; };
 		E6FA996329D69607003D56B0 /* RPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPost.swift; sourceTree = "<group>"; };
-		E6FA996629D69607003D56B0 /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		E6FA996729D69607003D56B0 /* PostResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		E6FA996829D69607003D56B0 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		E6FA996929D69607003D56B0 /* ApiServiceImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiServiceImp.swift; sourceTree = "<group>"; };
@@ -1051,7 +1047,6 @@
 		E6FA994929D69607003D56B0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E6FA994C29D69607003D56B0 /* BaseModel.swift */,
 				E6FA994D29D69607003D56B0 /* Post.swift */,
 			);
 			path = Models;
@@ -1147,7 +1142,6 @@
 		E6FA996529D69607003D56B0 /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				E6FA996629D69607003D56B0 /* BaseResponse.swift */,
 				E6FA996729D69607003D56B0 /* PostResponse.swift */,
 				E6FA996829D69607003D56B0 /* ErrorResponse.swift */,
 			);
@@ -1430,7 +1424,6 @@
 				E6927EA829EFE2D10028DAB3 /* RemoteConfigManagerImp.swift in Sources */,
 				E6B60E90290247CA00C12F33 /* DemoMainVC.swift in Sources */,
 				E61693AB29F661EC00721CC6 /* RewardedAdManagermp.swift in Sources */,
-				E6FA997829D69607003D56B0 /* BaseModel.swift in Sources */,
 				E6B60E71290247CA00C12F33 /* UIImage.swift in Sources */,
 				E6FA994229D69576003D56B0 /* ViewModelModule.swift in Sources */,
 				E6FA998829D69607003D56B0 /* PostResponse.swift in Sources */,
@@ -1474,7 +1467,6 @@
 				E6B60EA6290247CA00C12F33 /* PulsatingButton.swift in Sources */,
 				E6B60E85290247CA00C12F33 /* DemoSettingVM.swift in Sources */,
 				E646F2EB2A08D407005DDE39 /* EventTrackingImp.swift in Sources */,
-				E6FA998729D69607003D56B0 /* BaseResponse.swift in Sources */,
 				E6B60E6B290247CA00C12F33 /* UIColor.swift in Sources */,
 				E6B60EC5290247CA00C12F33 /* IAPManager.swift in Sources */,
 				E6C1D0A829D6C84100E46490 /* PermissionHelper.swift in Sources */,

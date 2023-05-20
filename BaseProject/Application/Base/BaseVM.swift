@@ -31,7 +31,7 @@ class BaseVM: NSObject {
     
     let bag = DisposeBag()
     
-    required override init() {
+    override init() {
         super.init()
         
         IAPManager.shared().subscriptionSucceed {[weak self] isPurchased in
@@ -39,10 +39,10 @@ class BaseVM: NSObject {
             self.subscriptionSucceed.accept((isPurchased))
         }
         
-        registerLisenBusEvent()
+        listenerEvents()
     }
     
-    func registerLisenBusEvent()  {}
+    func listenerEvents()  {}
     
     deinit {
         print("deinit viewmodel :: >>>> \(String(describing: self)) <<<<")

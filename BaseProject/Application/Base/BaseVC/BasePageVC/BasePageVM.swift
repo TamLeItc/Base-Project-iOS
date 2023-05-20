@@ -12,8 +12,8 @@ class BasePageVM: BaseVM {
     
     let changePage = PublishData<Int>()
     
-    override func registerLisenBusEvent() {
-        super.registerLisenBusEvent()
+    override func listenerEvents() {
+        super.listenerEvents()
         
         RxBus.shared
             .asObservable(event: BusEvents.ChangePage.self)

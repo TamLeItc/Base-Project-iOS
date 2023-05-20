@@ -304,5 +304,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSAdvertisingAttributionReportEndpoint</key>
+	<string>https://adjust-skadnetwork.com</string>
 </dict>
 </plist>

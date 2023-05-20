@@ -16,7 +16,7 @@ extension String {
             return UIImage(named: self)?.withRenderingMode(renderingMode)
         }
     
-    var toUIColor: UIColor {
+    func toUIColor(alpha: Double = 1) -> UIColor {
         if let color = UIColor(named: self) {
             return color
         } else {
@@ -32,7 +32,7 @@ extension String {
             return UIColor(red: CGFloat((hexInt & 0xFF0000) >> 16) / 255.0,
                            green: CGFloat((hexInt & 0x00FF00) >> 8) / 255.0,
                            blue: CGFloat(hexInt & 0x0000FF) / 255.0,
-                           alpha: 1)
+                           alpha: alpha)
         }
     }
     

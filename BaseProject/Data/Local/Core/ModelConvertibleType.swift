@@ -19,7 +19,7 @@ protocol ModelConvertibleType {
     func asModel() -> ModelType
 }
 
-extension BaseModel {
+extension RealmRepresentable {
     static func build<O: Object>(_ builder: (O) -> Void) -> O {
         let object = O()
         builder(object)

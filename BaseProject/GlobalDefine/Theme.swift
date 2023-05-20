@@ -11,11 +11,11 @@ import UIKit
 enum Theme {
     //MARK: -- Color
     enum Colors {
-        static let primary = "colorPrimary".toUIColor
-        static let secondary = "colorSecondary".toUIColor
-        static let textPrimary = "colorTextPrimary".toUIColor
-        static let textsecondary = "colorTextSecondary".toUIColor
-        static let accent = "colorAccent".toUIColor
+        static let primary = "colorPrimary".toUIColor()
+        static let secondary = "colorSecondary".toUIColor()
+        static let textPrimary = "colorTextPrimary".toUIColor()
+        static let textsecondary = "colorTextSecondary".toUIColor()
+        static let accent = "colorAccent".toUIColor()
         
         enum InApp {
             static let primaryColor = UIColor(hex: 0xffffff)

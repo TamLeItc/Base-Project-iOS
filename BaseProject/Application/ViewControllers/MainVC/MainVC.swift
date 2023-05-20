@@ -12,6 +12,8 @@ class MainVC: BaseVC<MainVM> {
     
     @IBOutlet weak var button: UIButton!
     
+    let a: [String: String] = [:]
+    
     override func addEventForViews() {
         super.addEventForViews()
         

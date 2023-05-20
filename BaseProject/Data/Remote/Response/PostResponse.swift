@@ -6,19 +6,17 @@
 //  Copyright © 2021 Tam Le. All rights reserved.
 //
 
-import Foundation
 import ObjectMapper
 
-final class PostResponse: BaseResponse {
+struct PostResponse: Mappable {
+    
     var data: [Post] = []
     
-    required init?(map: Map) {
-        super.init(map: map)
+    init?(map: ObjectMapper.Map) {
+        
     }
     
-    override func mapping(map: Map) {
-        super.mapping(map: map)
-        
+    mutating func mapping(map: Map) {
         data <- map["data"]
     }
     

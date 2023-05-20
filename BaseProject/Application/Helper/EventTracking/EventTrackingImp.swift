@@ -11,7 +11,7 @@ import AdServices
 import Alamofire
 import Adjust
 
-class EventTrackingImp: EventTracking {
+class EventTrackingImp: NSObject, EventTracking {
 
     private var remoteConfigManager: RemoteConfigManager? = nil
     
@@ -66,6 +66,8 @@ extension EventTrackingImp {
         let adjustConfig = ADJConfig(
             appToken: appToken,
             environment: environment)
+        
+        adjustConfig?.delegate = self
         
         Adjust.appDidLaunch(adjustConfig)
     }
@@ -166,5 +168,15 @@ extension EventTrackingImp {
         let event = ADJEvent(eventToken: remoteConfigManager?.getStringValue(fromKey: .AdjustTokenPurchaseKey) ?? "")
         event?.setRevenue(needMoney, currency: currency)
         Adjust.trackEvent(event)
+    }
+}
+
+extension EventTrackingImp: AdjustDelegate {
+    func adjustEventTrackingSucceeded(_ eventSuccessResponseData: ADJEventSuccess?) {
+        print("[Adjust] adjustEventTrackingSucceeded")
+    }
+    
+    func adjustEventTrackingFailed(_ eventFailureResponseData: ADJEventFailure?) {
+        print("[Adjust] adjustEventTrackingFailed \(eventFailureResponseData?.description ?? "")")
     }
 }
