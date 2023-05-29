@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8DEAF1C599CA71076622F014 /* Pods_BaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CA42B146981DE2FA515424 /* Pods_BaseProject.framework */; };
+		E60B40282A2493A100EE15C7 /* RemoteConfigConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60B40272A2493A100EE15C7 /* RemoteConfigConstants.swift */; };
 		E616939C29F661EC00721CC6 /* MergeAdLoadMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616938029F661EB00721CC6 /* MergeAdLoadMore.swift */; };
 		E616939D29F661EC00721CC6 /* MergeItemAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616938129F661EB00721CC6 /* MergeItemAds.swift */; };
 		E616939E29F661EC00721CC6 /* MediumNativeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E616938329F661EB00721CC6 /* MediumNativeCollectionViewCell.swift */; };
@@ -33,8 +34,7 @@
 		E61693B329F6779C00721CC6 /* AdModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61693B229F6779C00721CC6 /* AdModule.swift */; };
 		E63ECBCA29F9196100BA6D6F /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63ECBC929F9196100BA6D6F /* BaseError.swift */; };
 		E63ECBCC29F919B200BA6D6F /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63ECBCB29F919B200BA6D6F /* AlertMessage.swift */; };
-		E646F2E82A08D3F8005DDE39 /* EventTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646F2E72A08D3F8005DDE39 /* EventTracking.swift */; };
-		E646F2EB2A08D407005DDE39 /* EventTrackingImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646F2E92A08D407005DDE39 /* EventTrackingImp.swift */; };
+		E646F2EB2A08D407005DDE39 /* EventTrackingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646F2E92A08D407005DDE39 /* EventTrackingHelper.swift */; };
 		E646F2EC2A08D407005DDE39 /* EventTrackingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646F2EA2A08D407005DDE39 /* EventTrackingType.swift */; };
 		E664D80329DD308200EF8C56 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664D80229DD308200EF8C56 /* Inject.swift */; };
 		E6927E8429EFDCD70028DAB3 /* PermissionHelperDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927E8329EFDCD70028DAB3 /* PermissionHelperDelegate.swift */; };
@@ -46,10 +46,8 @@
 		E6927E9629EFDDA30028DAB3 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927E8E29EFDDA30028DAB3 /* BaseCollectionViewCell.swift */; };
 		E6927E9729EFDDA30028DAB3 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927E8F29EFDDA30028DAB3 /* BaseVM.swift */; };
 		E6927E9F29EFDDDE0028DAB3 /* AppDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927E9929EFDDDE0028DAB3 /* AppDataSource.swift */; };
-		E6927EA029EFDDDE0028DAB3 /* AppDataSourceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927E9A29EFDDDE0028DAB3 /* AppDataSourceImp.swift */; };
 		E6927EA529EFDDF60028DAB3 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927EA429EFDDF60028DAB3 /* AppModule.swift */; };
-		E6927EA829EFE2D10028DAB3 /* RemoteConfigManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927EA729EFE2D10028DAB3 /* RemoteConfigManagerImp.swift */; };
-		E6927EAA29EFE5060028DAB3 /* RemoteConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927EA929EFE5060028DAB3 /* RemoteConfigManager.swift */; };
+		E6927EA829EFE2D10028DAB3 /* RemoteConfigHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927EA729EFE2D10028DAB3 /* RemoteConfigHelper.swift */; };
 		E6B60E39290247CA00C12F33 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6B60D5E290247C900C12F33 /* Localizable.strings */; };
 		E6B60E3A290247CA00C12F33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6B60D60290247C900C12F33 /* Assets.xcassets */; };
 		E6B60E3B290247CA00C12F33 /* Overpass-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6B60D63290247C900C12F33 /* Overpass-Regular.ttf */; };
@@ -194,6 +192,7 @@
 		7D881323908D2DECBEA8A6C7 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		9184CF6AC8E9FC48B1D815C4 /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		C9CA42B146981DE2FA515424 /* Pods_BaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E60B40272A2493A100EE15C7 /* RemoteConfigConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigConstants.swift; sourceTree = "<group>"; };
 		E616938029F661EB00721CC6 /* MergeAdLoadMore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeAdLoadMore.swift; sourceTree = "<group>"; };
 		E616938129F661EB00721CC6 /* MergeItemAds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeItemAds.swift; sourceTree = "<group>"; };
 		E616938329F661EB00721CC6 /* MediumNativeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumNativeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -219,8 +218,7 @@
 		E61693B229F6779C00721CC6 /* AdModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdModule.swift; sourceTree = "<group>"; };
 		E63ECBC929F9196100BA6D6F /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 		E63ECBCB29F919B200BA6D6F /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
-		E646F2E72A08D3F8005DDE39 /* EventTracking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTracking.swift; sourceTree = "<group>"; };
-		E646F2E92A08D407005DDE39 /* EventTrackingImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTrackingImp.swift; sourceTree = "<group>"; };
+		E646F2E92A08D407005DDE39 /* EventTrackingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTrackingHelper.swift; sourceTree = "<group>"; };
 		E646F2EA2A08D407005DDE39 /* EventTrackingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTrackingType.swift; sourceTree = "<group>"; };
 		E664D80229DD308200EF8C56 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
 		E6927E8329EFDCD70028DAB3 /* PermissionHelperDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionHelperDelegate.swift; sourceTree = "<group>"; };
@@ -232,10 +230,8 @@
 		E6927E8E29EFDDA30028DAB3 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		E6927E8F29EFDDA30028DAB3 /* BaseVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
 		E6927E9929EFDDDE0028DAB3 /* AppDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataSource.swift; sourceTree = "<group>"; };
-		E6927E9A29EFDDDE0028DAB3 /* AppDataSourceImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataSourceImp.swift; sourceTree = "<group>"; };
 		E6927EA429EFDDF60028DAB3 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
-		E6927EA729EFE2D10028DAB3 /* RemoteConfigManagerImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigManagerImp.swift; sourceTree = "<group>"; };
-		E6927EA929EFE5060028DAB3 /* RemoteConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigManager.swift; sourceTree = "<group>"; };
+		E6927EA729EFE2D10028DAB3 /* RemoteConfigHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigHelper.swift; sourceTree = "<group>"; };
 		E6B60D462902467900C12F33 /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B60D5F290247C900C12F33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E6B60D60290247C900C12F33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -541,7 +537,6 @@
 			isa = PBXGroup;
 			children = (
 				E6927E9929EFDDDE0028DAB3 /* AppDataSource.swift */,
-				E6927E9A29EFDDDE0028DAB3 /* AppDataSourceImp.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -549,20 +544,19 @@
 		E6927E9B29EFDDDE0028DAB3 /* EventTracking */ = {
 			isa = PBXGroup;
 			children = (
-				E646F2E72A08D3F8005DDE39 /* EventTracking.swift */,
-				E646F2E92A08D407005DDE39 /* EventTrackingImp.swift */,
+				E646F2E92A08D407005DDE39 /* EventTrackingHelper.swift */,
 				E646F2EA2A08D407005DDE39 /* EventTrackingType.swift */,
 			);
 			path = EventTracking;
 			sourceTree = "<group>";
 		};
-		E6927EA629EFE2C20028DAB3 /* RemoteConfigManager */ = {
+		E6927EA629EFE2C20028DAB3 /* RemoteConfig */ = {
 			isa = PBXGroup;
 			children = (
-				E6927EA729EFE2D10028DAB3 /* RemoteConfigManagerImp.swift */,
-				E6927EA929EFE5060028DAB3 /* RemoteConfigManager.swift */,
+				E6927EA729EFE2D10028DAB3 /* RemoteConfigHelper.swift */,
+				E60B40272A2493A100EE15C7 /* RemoteConfigConstants.swift */,
 			);
-			path = RemoteConfigManager;
+			path = RemoteConfig;
 			sourceTree = "<group>";
 		};
 		E6B60D3D2902467900C12F33 = {
@@ -923,7 +917,7 @@
 				E63ECBC829F9192E00BA6D6F /* Error */,
 				E6B60E01290247C900C12F33 /* Advertisement */,
 				E6B60E1E290247C900C12F33 /* InAppPurchase */,
-				E6927EA629EFE2C20028DAB3 /* RemoteConfigManager */,
+				E6927EA629EFE2C20028DAB3 /* RemoteConfig */,
 				E6927E9829EFDDDE0028DAB3 /* DataSource */,
 				E6927E9B29EFDDDE0028DAB3 /* EventTracking */,
 				E6B60DB9290247C900C12F33 /* AlertVC */,
@@ -1388,7 +1382,6 @@
 				E6B60E6E290247CA00C12F33 /* UIDevice.swift in Sources */,
 				E6FA999129D69607003D56B0 /* EasyDL.swift in Sources */,
 				E6B60E68290247CA00C12F33 /* UIView+Shadow.swift in Sources */,
-				E6927EA029EFDDDE0028DAB3 /* AppDataSourceImp.swift in Sources */,
 				E61693B129F661EC00721CC6 /* IntersAdManagerImp.swift in Sources */,
 				E6927E9F29EFDDDE0028DAB3 /* AppDataSource.swift in Sources */,
 				E6B60E75290247CA00C12F33 /* UIImageView.swift in Sources */,
@@ -1421,7 +1414,7 @@
 				E6B60ED0290247CA00C12F33 /* AppDelegate+Notification.swift in Sources */,
 				E6B60E80290247CA00C12F33 /* RunLoopThreadScheduler.swift in Sources */,
 				E6FA997F29D69607003D56B0 /* DBManager.swift in Sources */,
-				E6927EA829EFE2D10028DAB3 /* RemoteConfigManagerImp.swift in Sources */,
+				E6927EA829EFE2D10028DAB3 /* RemoteConfigHelper.swift in Sources */,
 				E6B60E90290247CA00C12F33 /* DemoMainVC.swift in Sources */,
 				E61693AB29F661EC00721CC6 /* RewardedAdManagermp.swift in Sources */,
 				E6B60E71290247CA00C12F33 /* UIImage.swift in Sources */,
@@ -1446,6 +1439,7 @@
 				E6B60E88290247CA00C12F33 /* DemoSettingVC.swift in Sources */,
 				E6B60E5F290247CA00C12F33 /* AppUtils.swift in Sources */,
 				E6B60E96290247CA00C12F33 /* SplashVC.swift in Sources */,
+				E60B40282A2493A100EE15C7 /* RemoteConfigConstants.swift in Sources */,
 				E6B60E8F290247CA00C12F33 /* DemoMainVM.swift in Sources */,
 				E6B60E73290247CA00C12F33 /* String.swift in Sources */,
 				E6B60E84290247CA00C12F33 /* Single+Ext.swift in Sources */,
@@ -1457,7 +1451,6 @@
 				E6FA998629D69607003D56B0 /* RPost.swift in Sources */,
 				E6FA998E29D69607003D56B0 /* NetworkConfig.swift in Sources */,
 				E6FA999029D69607003D56B0 /* Extensions.swift in Sources */,
-				E6927EAA29EFE5060028DAB3 /* RemoteConfigManager.swift in Sources */,
 				E61693AE29F661EC00721CC6 /* AppOpenAdManager.swift in Sources */,
 				E6FA99AA29D6A677003D56B0 /* NetworkModule.swift in Sources */,
 				E6B60E8C290247CA00C12F33 /* DemoLoadDataVM.swift in Sources */,
@@ -1466,12 +1459,11 @@
 				E6B60E7B290247CA00C12F33 /* AlertVC.swift in Sources */,
 				E6B60EA6290247CA00C12F33 /* PulsatingButton.swift in Sources */,
 				E6B60E85290247CA00C12F33 /* DemoSettingVM.swift in Sources */,
-				E646F2EB2A08D407005DDE39 /* EventTrackingImp.swift in Sources */,
+				E646F2EB2A08D407005DDE39 /* EventTrackingHelper.swift in Sources */,
 				E6B60E6B290247CA00C12F33 /* UIColor.swift in Sources */,
 				E6B60EC5290247CA00C12F33 /* IAPManager.swift in Sources */,
 				E6C1D0A829D6C84100E46490 /* PermissionHelper.swift in Sources */,
 				E6B60E89290247CA00C12F33 /* DemoLoadDataVC.swift in Sources */,
-				E646F2E82A08D3F8005DDE39 /* EventTracking.swift in Sources */,
 				E616939E29F661EC00721CC6 /* MediumNativeCollectionViewCell.swift in Sources */,
 				E6B60EC2290247CA00C12F33 /* ConnectionHelper.swift in Sources */,
 				E6FA997E29D69607003D56B0 /* Reactive.swift in Sources */,

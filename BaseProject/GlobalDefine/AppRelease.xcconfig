@@ -25,6 +25,7 @@ EmailDeveloper              = mail@gmail.com
 AppGroupID                  = group.com.test.app.new.app
 PrivacyPolicyUrl            = $(PROTOCOL_HTTPS)/vi.wikipedia.org/   //PROTOCOL_HTTP if url start with https:/
 TermOfUseUrl                = $(PROTOCOL_HTTPS)/vi.wikipedia.org/   //PROTOCOL_HTTPS if url start with https:/
+RefundUrl                   = $(PROTOCOL_HTTPS)/vi.wikipedia.org/   //PROTOCOL_HTTPS if url start with https:/
 EnableShowUpdateAppDialog   = YES                                   //Nếu YES, "dialog update" sẽ hiển thị khi có version mới trên store
 
 //Advertisement

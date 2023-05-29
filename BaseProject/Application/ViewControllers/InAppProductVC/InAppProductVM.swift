@@ -26,9 +26,6 @@ class InAppProductVM: BaseVM {
     let purchased = PublishData<String>()
     let loading = PublishData<Bool>()
     
-    @Inject
-    var eventTracking: EventTracking
-    
     private var products = [IAPProduct]()
     private var skProducts = [IAPSKProduct]()
     
@@ -122,7 +119,7 @@ class InAppProductVM: BaseVM {
                 switch purchaseResult {
                 case .purchased?:
                     self.purchased.accept(message)
-                    self.eventTracking.logEventInApp(product, type: .inapp)
+                    EventTrackingHelper.shared.logEventInApp(product, type: .inapp)
                 default:
                     self.messageData.accept(AlertMessage(type: .error, description: message))
                     break
@@ -134,7 +131,7 @@ class InAppProductVM: BaseVM {
                 switch purchaseResult {
                 case .purchased?:
                     self.purchased.accept(message)
-                    self.eventTracking.logEventInApp(product, type: .subcription)
+                    EventTrackingHelper.shared.logEventInApp(product, type: .subcription)
                 default:
                     self.messageData.accept(AlertMessage(type: .error, description: message))
                     break
@@ -150,7 +147,7 @@ class InAppProductVM: BaseVM {
             switch purchaseResult {
             case .purchased?:
                 self.purchased.accept(message)
-                self.eventTracking.logEventInApp(nil, type: .restore)
+                EventTrackingHelper.shared.logEventInApp(nil, type: .restore)
             default:
                 self.messageData.accept(AlertMessage(type: .error, description: message))
                 break

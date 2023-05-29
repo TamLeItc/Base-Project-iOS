@@ -13,7 +13,7 @@ import RxCocoa
 import GoogleMobileAds
 
 class BaseVM: NSObject {
-    
+    let trigger = PublishRelay<Void>()
     let subscriptionSucceed = PublishData<Bool>()
     let indicatorLoading = ActivityIndicator()
     let errorTracker = ErrorTracker()

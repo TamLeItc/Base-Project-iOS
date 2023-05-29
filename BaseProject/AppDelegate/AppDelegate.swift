@@ -19,13 +19,6 @@ import AppsFlyerLib
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    @Inject
-    var eventTracking: EventTracking
-    @Inject
-    var remoteConfigManager: RemoteConfigManager
-    @Inject
-    var openAdManager: AppOpenAdManager
-    
     var window: UIWindow?
     var isLightForegroundStatusBar = false
     var orientationLock = UIInterfaceOrientationMask.all
@@ -48,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mkProgressConfig()
         setupKingfisher()
         
-        eventTracking.configSearchAds()
+        EventTrackingHelper.shared.configSearchAds()
         
         return true
     }
@@ -58,8 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppUtils.requestIDFA() {
             DispatchQueue.main.async {
                 self.openAppAdsConfigPresent()
-                self.remoteConfigManager.fetchConfig {
-                    self.eventTracking.startWith(self.remoteConfigManager)
+                RemoteConfigHelper.shared.fetchConfig {
+                    EventTrackingHelper.shared.startWith()
                 }
             }
         }
@@ -143,7 +136,7 @@ extension AppDelegate {
         if rootVC != nil && (rootVC!.isKind(of: InAppProductVC.self) || rootVC!.isKind(of: WebviewVC.self)) {
             return
         }
-        openAdManager.tryToPresentAd(rootVC) {
+        AdManager.shared.appOpenAd.tryToPresentAd(rootVC) {
             if rootVC!.isKind(of: SplashVC.self) {
                 self.windowMainConfig()
             }

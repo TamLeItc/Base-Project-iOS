@@ -75,22 +75,8 @@ class DemoLoadDataVC: BaseVC<DemoLoadDataVM> {
         
         viewModel.postData.asObservable()
             .map { [SectionModel(model: (), items: $0)] }
-            .bind(to: self.tableView.rx.items(dataSource: dataSource.getPostDataSource()))
+            .bind(to: self.tableView.rx.items(dataSource: getPostDataSource()))
             .disposed(by: bag)
-        
-        viewModel.indicatorLoading
-            .drive(onNext: {[weak self] isLoading in
-                guard let self = self else { return }
-                isLoading ? self.showLoading() : self.hideLoading()
-            })
-            .disposed(by: bag)
-        
-        viewModel.errorTracker
-            .drive(onNext: {[weak self] error in
-            guard let self = self else { return }
-                Logger.error(error.localizedDescription)
-                AlertVC.showMessage(self, style: .error, message: "general_error_message".localized)
-        }).disposed(by: bag)
         
         viewModel.subscriptionSucceed.subscribe(onNext: {[weak self] isPurchased in
             guard let self = self else { return }

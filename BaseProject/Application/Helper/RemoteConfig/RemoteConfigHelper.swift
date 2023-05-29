@@ -1,5 +1,5 @@
 //
-//  RemoteConfigManagerImp.swift
+//  RemoteConfigHelper.swift
 //  BaseProject
 //
 //  Created by Tam Le on 19/04/2023.
@@ -8,20 +8,11 @@
 import Foundation
 import FirebaseRemoteConfig
 
-enum RemoteConfigKey: String {
-    case AdjustTokenKey = "LockSafe_AdjustTokenKey"
-    case AdjustTokenPurchaseKey = "LockSafe_AdjustTokenPurchaseKey"
-}
-
-enum RemoteConfigDefault {
-    static let adjustToken: NSString = "qubo199o01kw"
-    static let adjustTokenPurchase: NSString = "95sjb9"
-}
-
-class RemoteConfigManagerImp: RemoteConfigManager {
+class RemoteConfigHelper {
+    
+    static let shared = RemoteConfigHelper.init()
     
     private var remoteConfig: RemoteConfig? = nil
-    
     private var remoteConfigFetched = false
     
     func fetchConfig(_ onCompleted: (() -> Void)?) {

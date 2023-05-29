@@ -24,6 +24,7 @@ enum Configs {
         static let appGroup = AppConfigs.shared.appGroupID()
         static let policyUrl = AppConfigs.shared.privacyPolicyUrl()
         static let termOfUseUrl = AppConfigs.shared.termOfUseUrl()
+        static let refundUrl = AppConfigs.shared.refundUrl()
         static let enableShowUpdateAppDialog = AppConfigs.shared.enableShowUpdateAppDialog() // if true app will auto show dialog require udpate app
     }
     
@@ -143,6 +144,10 @@ fileprivate class AppConfigs {
     
     func termOfUseUrl() -> String {
         return appInfos["TermOfUseUrl"] as? String ?? ""
+    }
+    
+    func refundUrl() -> String {
+        return appInfos["RefundUrl"] as? String ?? ""
     }
     
     func enableShowUpdateAppDialog() -> Bool {

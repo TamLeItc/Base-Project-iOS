@@ -31,6 +31,7 @@ EmailDeveloper              = mail@gmail.com
 AppGroupID                  = group.com.test.app.new.app
 PrivacyPolicyUrl            = $(PROTOCOL_HTTPS)/vi.wikipedia.org/   //PROTOCOL_HTTP if url start with https:/
 TermOfUseUrl                = $(PROTOCOL_HTTPS)/vi.wikipedia.org/   //PROTOCOL_HTTPS if url start with https:/
+RefundUrl                   = $(PROTOCOL_HTTPS)/vi.wikipedia.org/   //PROTOCOL_HTTPS if url start with https:/
 EnableShowUpdateAppDialog   = YES                                   //Nếu YES, "dialog update" sẽ hiển thị khi có version mới trên store
 
 //Advertisement
@@ -45,7 +46,7 @@ ADSAppOpenID                = ca-app-pub-3940256099942544/1033173712
 
 //InAppPurcharse
 EnableShowInApp             = YES          //Nếu InApp chưa sẵn sàng, nên để giá trị là NO, user sẽ dùng app với full chức năng và quảng cáo
-EnableShowInAppWhenOpenApp  = NO
+EnableShowInAppWhenOpenApp  = YES
 LimitedFeature              = YES          //Nếu YES, một số tính năng sẽ bị khóa, phải mua inapp mới xài được.
 IAPSubcriptionSecret        = d709f7978cbf4c33b74c899b53222a66
 IAPOneTime                  = com.test.new.nonconsumable1

@@ -16,8 +16,6 @@ class BaseVC<VM: BaseVM>: UIViewController {
     
     @Inject
     var viewModel: VM!
-    @Inject
-    var dataSource: AppDataSource
     
     let bag = DisposeBag()
     
@@ -114,17 +112,11 @@ class BaseVC<VM: BaseVM>: UIViewController {
             }).disposed(by: bag)
         
         viewModel.indicatorLoading.asObservable()
-            .subscribe(onNext: {[weak self] loading in
-                guard let _ = self else { return }
-                UIApplication.shared.isNetworkActivityIndicatorVisible = loading
-            }).disposed(by: bag)
-        
-        viewModel.indicatorLoading
-            .drive(onNext: {[weak self] isLoading in
+            .subscribe(onNext: {[weak self] isLoading in
                 guard let self = self else { return }
+                UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
                 isLoading ? self.showLoading() : self.hideLoading()
-            })
-            .disposed(by: bag)
+            }).disposed(by: bag)
         
         viewModel.loadingData
             .subscribe(onNext: {[weak self] isLoading in

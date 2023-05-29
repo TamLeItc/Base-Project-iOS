@@ -18,35 +18,37 @@ class DemoLoadDataVM: BaseVM {
     
     private var posts: [Post] = []
     
-    private let postRelay = BehaviorRelay<[Post]>(value: [])
+    private let postMergeAdRelay = BehaviorRelay<[Post]>(value: [])
     
     override init() {
         super.init()
         
         subcriptionMergeAds(
-            withDataRelay: postRelay,
+            withDataRelay: postMergeAdRelay,
             offset: MergeOffset(pad: 6, phone: 4)
         )
         .subscribe(onNext: {[weak self] data in
             guard let self = self else { return }
-            self.posts.append(contentsOf: data.items)
             self.postData.accept(data.mergeList)
         }).disposed(by: bag)
     }
     
-    func fetchData(isRefresh: Bool){
-        if isRefresh {
-            self.posts.removeAll()
-        }
-        
+    func fetchData(isRefresh: Bool) {
         remoteRepository.getPosts()
             .trackError(errorTracker)
             .trackActivity(indicatorLoading)
-            .bind(to: postRelay)
+            .subscribe(onNext: {[weak self] data in
+                guard let self = self else { return }
+                if isRefresh {
+                    self.posts.removeAll()
+                }
+                self.posts.append(contentsOf: data)
+                self.postMergeAdRelay.accept(data)
+            })
             .disposed(by: bag)
     }
     
     func itemSelected(_ item: Post) {
-        print(">>>>>> Selected: \(item.title)")
+        
     }
 }

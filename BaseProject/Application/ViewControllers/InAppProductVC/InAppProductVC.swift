@@ -127,7 +127,7 @@ class InAppProductVC: BaseVC<InAppProductVM> {
         
         viewModel.inAppProductData.asObservable()
             .map { [SectionModel(model: (), items: $0)] }
-            .bind(to: self.inAppTableView.rx.items(dataSource: dataSource.getInAppDataSource()))
+            .bind(to: self.inAppTableView.rx.items(dataSource: getInAppDataSource()))
             .disposed(by: bag)
 
         viewModel.errorGetInAppMessage.asObservable().subscribe(onNext: {[weak self] message in

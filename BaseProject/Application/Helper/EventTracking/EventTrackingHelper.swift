@@ -1,5 +1,5 @@
 //
-//  EventTrackingImp.swift
+//  EventTrackingHelper.swift
 //  i270-locksafe
 //
 //  Created by Tam Le on 13/04/2023.
@@ -11,14 +11,13 @@ import AdServices
 import Alamofire
 import Adjust
 
-class EventTrackingImp: NSObject, EventTracking {
-
-    private var remoteConfigManager: RemoteConfigManager? = nil
+class EventTrackingHelper: NSObject {
+    
+    static let shared = EventTrackingHelper.init()
     
     private var analyticsData: [String : Any] = [:]
     
-    func startWith(_ configManager: RemoteConfigManager) {
-        remoteConfigManager = configManager
+    func startWith() {
         
         configAdjust()
         configSearchAds()
@@ -34,7 +33,7 @@ class EventTrackingImp: NSObject, EventTracking {
     }
     
     func configAdjust() {
-        adjustConfig(remoteConfigManager?.getStringValue(fromKey: .AdjustTokenKey) ?? "")
+        adjustConfig(RemoteConfigHelper.shared.getStringValue(fromKey: .AdjustTokenKey))
     }
     
     func logEventInApp(_ product: IAPProduct?, type: EventTrackingType) {
@@ -56,7 +55,7 @@ class EventTrackingImp: NSObject, EventTracking {
     }
 }
 
-extension EventTrackingImp {
+extension EventTrackingHelper {
     private func adjustConfig(_ appToken: String) {
 #if DEBUG
         let environment = ADJEnvironmentSandbox as String
@@ -130,7 +129,7 @@ extension EventTrackingImp {
     }
 }
 
-extension EventTrackingImp {
+extension EventTrackingHelper {
     //MARK: -- Log Server search ads
     private func logServerSearchAds(purchaseName: String) {
         analyticsData["purchase"] = purchaseName
@@ -165,13 +164,13 @@ extension EventTrackingImp {
     
     //MARK: -- Adjust
     private func logEventAdjustPurchase(productSelected: IAPProduct, needMoney: Double, currency: String) {
-        let event = ADJEvent(eventToken: remoteConfigManager?.getStringValue(fromKey: .AdjustTokenPurchaseKey) ?? "")
+        let event = ADJEvent(eventToken: RemoteConfigHelper.shared.getStringValue(fromKey: .AdjustTokenPurchaseKey) ?? "")
         event?.setRevenue(needMoney, currency: currency)
         Adjust.trackEvent(event)
     }
 }
 
-extension EventTrackingImp: AdjustDelegate {
+extension EventTrackingHelper: AdjustDelegate {
     func adjustEventTrackingSucceeded(_ eventSuccessResponseData: ADJEventSuccess?) {
         print("[Adjust] adjustEventTrackingSucceeded")
     }
