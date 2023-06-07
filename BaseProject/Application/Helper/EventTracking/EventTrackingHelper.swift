@@ -73,7 +73,7 @@ extension EventTrackingHelper {
     
     private func appFlyersConfigs() {
         AppsFlyerLib.shared().appsFlyerDevKey = Configs.InfoApp.appsFlyerId
-        AppsFlyerLib.shared().appleAppID = Configs.InfoApp.appId
+        AppsFlyerLib.shared().appleAppID = Configs.InfoApp.appId.replacingOccurrences(of: "id", with: "")
 #if DEBUG
         AppsFlyerLib.shared().isDebug = true
 #endif
