@@ -9,11 +9,19 @@
 import UIKit
 
 class DemoSettingVC: BaseVC<DemoSettingVM> {
+    
+    let a = 10
+    var b = 10
+    
+    let c: Int? = nil
+    let d: Int? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         enablePopGestureRecognizer = false
+        
+        
     }
 
 }

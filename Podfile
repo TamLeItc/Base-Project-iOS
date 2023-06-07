@@ -61,6 +61,9 @@ target 'BaseProject' do
   post_install do |pi|
       pi.pods_project.targets.each do |target|
           target.build_configurations.each do |config|
+              config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = '$(inherited)'
+          end
+          target.build_configurations.each do |config|
               config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
           end
           if target.respond_to?(:product_type) and target.product_type == "com.apple.product-type.bundle"
