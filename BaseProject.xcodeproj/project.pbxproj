@@ -36,6 +36,7 @@
 		E63ECBCC29F919B200BA6D6F /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E63ECBCB29F919B200BA6D6F /* AlertMessage.swift */; };
 		E646F2EB2A08D407005DDE39 /* EventTrackingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646F2E92A08D407005DDE39 /* EventTrackingHelper.swift */; };
 		E646F2EC2A08D407005DDE39 /* EventTrackingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E646F2EA2A08D407005DDE39 /* EventTrackingType.swift */; };
+		E65E36532A416F72004C419D /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65E36522A416F72004C419D /* Localize.swift */; };
 		E664D80329DD308200EF8C56 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E664D80229DD308200EF8C56 /* Inject.swift */; };
 		E6927E8429EFDCD70028DAB3 /* PermissionHelperDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927E8329EFDCD70028DAB3 /* PermissionHelperDelegate.swift */; };
 		E6927E9029EFDDA30028DAB3 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6927E8629EFDDA30028DAB3 /* BaseTableViewCell.swift */; };
@@ -220,6 +221,7 @@
 		E63ECBCB29F919B200BA6D6F /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		E646F2E92A08D407005DDE39 /* EventTrackingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTrackingHelper.swift; sourceTree = "<group>"; };
 		E646F2EA2A08D407005DDE39 /* EventTrackingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTrackingType.swift; sourceTree = "<group>"; };
+		E65E36522A416F72004C419D /* Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
 		E664D80229DD308200EF8C56 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
 		E6927E8329EFDCD70028DAB3 /* PermissionHelperDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionHelperDelegate.swift; sourceTree = "<group>"; };
 		E6927E8629EFDDA30028DAB3 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -685,6 +687,7 @@
 				E6B60DB4290247C900C12F33 /* UIImageView.swift */,
 				E6B60DB5290247C900C12F33 /* UILabel.swift */,
 				E6B60DB6290247C900C12F33 /* Bundle.swift */,
+				E65E36522A416F72004C419D /* Localize.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1416,6 +1419,7 @@
 				E6FA997F29D69607003D56B0 /* DBManager.swift in Sources */,
 				E6927EA829EFE2D10028DAB3 /* RemoteConfigHelper.swift in Sources */,
 				E6B60E90290247CA00C12F33 /* DemoMainVC.swift in Sources */,
+				E65E36532A416F72004C419D /* Localize.swift in Sources */,
 				E61693AB29F661EC00721CC6 /* RewardedAdManagermp.swift in Sources */,
 				E6B60E71290247CA00C12F33 /* UIImage.swift in Sources */,
 				E6FA994229D69576003D56B0 /* ViewModelModule.swift in Sources */,

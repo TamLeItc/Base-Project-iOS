@@ -27,9 +27,6 @@ target 'BaseProject' do
   
   pod 'Kingfisher', '~> 6.3.1'
   
-  #multi language localize support
-  pod 'Localize', '~> 2.3.0'
-  
   #support UI
   pod 'MKProgress', '~> 1.1.0'
   pod 'MaterialComponents/Cards', '~> 124.2.0'

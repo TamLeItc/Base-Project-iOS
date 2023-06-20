@@ -8,7 +8,6 @@
 
 import Foundation
 import RxSwift
-import Localize
 
 /// PublishData is a wrapper for `PublishSubject`.
 ///

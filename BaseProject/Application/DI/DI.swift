@@ -8,7 +8,7 @@
 import Foundation
 import Swinject
 
-class DI {
+public class DI {
     
     static let shared = DI()
     

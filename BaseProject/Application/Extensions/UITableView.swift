@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Localize
 
 public extension UITableView {
     

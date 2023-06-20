@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Localize
 import GoogleMobileAds
 import Firebase
 import Siren
@@ -37,7 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         adsConfig()
         appFlyersConfigs()
         firebaseConfig()
-        localizeConfig()
         mkProgressConfig()
         setupKingfisher()
         
@@ -141,15 +139,6 @@ extension AppDelegate {
                 self.windowMainConfig()
             }
         }
-    }
-    
-    private func localizeConfig() {
-        // Set your localize provider.
-        Localize.update(provider: .strings)
-        // Set your file name
-        Localize.update(fileName: "Localizable")
-        // Set your default languaje.
-        Localize.update(defaultLanguage: "en")
     }
     
     private func firebaseConfig() {

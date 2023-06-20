@@ -39,18 +39,7 @@ import UIKit
     }
     
     private func initViews() {
-        initPlaceholder()
-    }
-    
-    private func initPlaceholder() {
-        placeholder = localizePlaceholder
-        attributedPlaceholder = NSAttributedString(
-            string: localizePlaceholder ?? "",
-            attributes: [
-                NSAttributedString.Key.foregroundColor: Theme.Colors.textPrimary,
-                NSAttributedString.Key.font: Theme.Fonts.regular.with(15) as Any
-            ]
-        )
+        
     }
     
     private func setupInputAccessoryView() {
